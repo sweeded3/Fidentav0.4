@@ -175,44 +175,60 @@
 }
 /* V4 small header polish */
 @media (max-width: 860px) {
+  .topbar {
+    align-items: center !important;
+  }
+
+  .topbar .brand-copy strong {
+    font-weight: 760 !important;
+    letter-spacing: -0.035em !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.32), 0 10px 22px rgba(17,20,24,0.055) !important;
+  }
+
   .topbar > .button {
     min-width: auto !important;
     width: auto !important;
+    min-height: 40px !important;
     padding-left: 8px !important;
     padding-right: 7px !important;
+    align-self: center !important;
   }
 
   .topbar > .button::before {
     content: "Кабинет" !important;
-    font-size: 13.1px !important;
-    letter-spacing: 0 !important;
+    font-size: 13.5px !important;
+    font-weight: 680 !important;
+    letter-spacing: -0.01em !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.36) !important;
   }
 
   .topbar::after {
     width: 46px !important;
     height: 46px !important;
     flex-basis: 46px !important;
+    align-self: center !important;
     border-color: rgba(126, 101, 68, 0.16) !important;
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.82),
       inset 0 -1px 0 rgba(126, 101, 68, 0.08),
       0 12px 26px rgba(31, 26, 20, 0.08) !important;
     background:
-      linear-gradient(#151411, #151411) center calc(50% - 7px) / 21px 2px no-repeat,
-      linear-gradient(#151411, #151411) calc(50% + 3px) center / 16px 2px no-repeat,
-      linear-gradient(#151411, #151411) center calc(50% + 7px) / 21px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.94), rgba(21,20,17,.94)) center calc(50% - 7px) / 21px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.88), rgba(21,20,17,.88)) calc(50% + 3px) center / 16px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.94), rgba(21,20,17,.94)) center calc(50% + 7px) / 21px 2px no-repeat,
       rgba(255, 250, 244, 0.55) !important;
   }
 }
 
 @media (max-width: 420px) {
   .topbar > .button {
+    min-height: 38px !important;
     padding-left: 7px !important;
     padding-right: 6px !important;
   }
 
   .topbar > .button::before {
-    font-size: 11.8px !important;
+    font-size: 12.1px !important;
   }
 
   .topbar::after {
