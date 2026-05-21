@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
-
 /* V4 Quest 1-2: header CTA, premium mobile menu, brand typography */
 
 .topbar .brand-copy strong {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-  font-weight: 700 !important;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 740 !important;
   letter-spacing: -0.035em !important;
-  line-height: 0.95 !important;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.30), 0 10px 22px rgba(17,20,24,0.05) !important;
+  line-height: 0.98 !important;
+  color: rgba(21, 20, 17, 0.88) !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.30), 0 10px 22px rgba(17,20,24,0.045) !important;
 }
 
 .topbar > .button {
@@ -55,7 +54,7 @@
   }
 
   .topbar .brand-copy strong {
-    font-size: clamp(1.26rem, 5.2vw, 1.66rem) !important;
+    font-size: clamp(1.18rem, 4.65vw, 1.52rem) !important;
   }
 
   .topbar .brand-copy span {
@@ -66,50 +65,52 @@
     display: inline-flex !important;
     min-width: auto !important;
     width: auto !important;
-    min-height: 40px !important;
-    padding-left: 8px !important;
-    padding-right: 7px !important;
+    min-height: 36px !important;
+    padding-left: 7px !important;
+    padding-right: 4px !important;
     white-space: nowrap !important;
     align-self: center !important;
-    background: rgba(255, 250, 244, 0.48) !important;
-    color: #151411 !important;
-    border-color: rgba(113, 89, 58, 0.15) !important;
+    background: rgba(255, 250, 244, 0.43) !important;
+    color: rgba(21, 20, 17, 0.80) !important;
+    border-color: rgba(113, 89, 58, 0.12) !important;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.78),
-      0 6px 16px rgba(31, 26, 20, 0.055) !important;
-    backdrop-filter: blur(18px) saturate(1.08) !important;
-    -webkit-backdrop-filter: blur(18px) saturate(1.08) !important;
+      inset 0 1px 0 rgba(255, 255, 255, 0.72),
+      0 5px 14px rgba(31, 26, 20, 0.045) !important;
+    backdrop-filter: blur(18px) saturate(1.05) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(1.05) !important;
   }
 
   .topbar > .button::before {
     content: "Кабинет" !important;
-    font-size: 13.5px !important;
-    font-weight: 680 !important;
-    letter-spacing: -0.01em !important;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.36) !important;
+    font-size: 12.7px !important;
+    font-weight: 650 !important;
+    letter-spacing: -0.012em !important;
+    transform: translateX(1px) !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.34) !important;
   }
 
   .topbar::after {
     content: "" !important;
-    width: 46px !important;
-    height: 46px !important;
-    flex: 0 0 46px !important;
+    width: 44px !important;
+    height: 44px !important;
+    flex: 0 0 44px !important;
     align-self: center !important;
-    border-color: rgba(126, 101, 68, 0.16) !important;
+    border-color: rgba(126, 101, 68, 0.13) !important;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.82),
-      inset 0 -1px 0 rgba(126, 101, 68, 0.08),
-      0 12px 26px rgba(31, 26, 20, 0.08) !important;
+      inset 0 1px 0 rgba(255, 255, 255, 0.76),
+      inset 0 -1px 0 rgba(126, 101, 68, 0.065),
+      0 10px 23px rgba(31, 26, 20, 0.06) !important;
     background:
-      linear-gradient(rgba(21,20,17,.94), rgba(21,20,17,.94)) center calc(50% - 7px) / 21px 2px no-repeat,
-      linear-gradient(rgba(21,20,17,.88), rgba(21,20,17,.88)) calc(50% + 3px) center / 16px 2px no-repeat,
-      linear-gradient(rgba(21,20,17,.94), rgba(21,20,17,.94)) center calc(50% + 7px) / 21px 2px no-repeat,
-      rgba(255, 250, 244, 0.55) !important;
+      linear-gradient(rgba(21,20,17,.78), rgba(21,20,17,.78)) center calc(50% - 7px) / 21px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.70), rgba(21,20,17,.70)) calc(50% + 3px) center / 16px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.78), rgba(21,20,17,.78)) center calc(50% + 7px) / 21px 2px no-repeat,
+      rgba(255, 250, 244, 0.49) !important;
   }
 
   .topbar.is-menu-open::after {
     content: "×" !important;
-    background: rgba(255, 250, 244, 0.62) !important;
+    background: rgba(255, 250, 244, 0.56) !important;
+    color: rgba(21,20,17,.76) !important;
     font-size: 27px !important;
     font-weight: 400 !important;
   }
@@ -169,13 +170,14 @@
   }
 
   .topbar > .button {
-    min-height: 38px !important;
-    padding-left: 7px !important;
-    padding-right: 6px !important;
+    min-height: 34px !important;
+    padding-left: 6px !important;
+    padding-right: 3px !important;
   }
 
   .topbar > .button::before {
-    font-size: 12.1px !important;
+    font-size: 11.6px !important;
+    transform: translateX(1px) !important;
   }
 
   .topbar::after {
