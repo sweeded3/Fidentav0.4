@@ -4,42 +4,45 @@
 
   const closeAll = () => {
     topbars.forEach((bar) => bar.classList.remove('is-menu-open'));
+    if (document.activeElement && typeof document.activeElement.blur === 'function') {
+      document.activeElement.blur();
+    }
   };
 
   topbars.forEach((topbar) => {
     const nav = topbar.querySelector('.nav');
     if (!nav) return;
 
-    topbar.addEventListener('click', (event) => {
+    const toggleFromPoint = (event) => {
       if (window.innerWidth > 860) return;
 
+      const point = event.touches ? event.touches[0] : event;
+      if (!point) return;
+
       const rect = topbar.getBoundingClientRect();
-      const clickInBurgerZone = event.clientX > rect.right - 76;
+      const clickInBurgerZone = point.clientX > rect.right - 76;
 
       if (!clickInBurgerZone) return;
 
       event.preventDefault();
       event.stopPropagation();
       topbar.classList.toggle('is-menu-open');
-    });
+    };
+
+    topbar.addEventListener('click', toggleFromPoint);
 
     nav.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', () => {
-        topbar.classList.remove('is-menu-open');
-      });
+      link.addEventListener('click', closeAll);
     });
   });
 
-  document.addEventListener('click', (event) => {
+  document.addEventListener('pointerdown', (event) => {
     if (window.innerWidth > 860) return;
-    const clickedInsideTopbar = event.target.closest('.topbar');
-    if (!clickedInsideTopbar) closeAll();
+    if (!event.target.closest('.topbar')) closeAll();
   });
 
-  document.addEventListener('touchstart', (event) => {
-    if (window.innerWidth > 860) return;
-    const touchedInsideTopbar = event.target.closest('.topbar');
-    if (!touchedInsideTopbar) closeAll();
+  document.addEventListener('scroll', () => {
+    if (window.innerWidth <= 860) closeAll();
   }, { passive: true });
 
   document.addEventListener('keydown', (event) => {
