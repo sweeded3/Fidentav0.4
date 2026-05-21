@@ -2,10 +2,10 @@
 
 .topbar .brand-copy strong {
   font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-  font-weight: 680 !important;
+  font-weight: 640 !important;
   letter-spacing: -0.035em !important;
   line-height: 0.98 !important;
-  color: rgba(21, 20, 17, 0.88) !important;
+  color: rgba(21, 20, 17, 0.91) !important;
   text-shadow: 0 1px 0 rgba(255,255,255,0.30), 0 10px 22px rgba(17,20,24,0.045) !important;
 }
 
@@ -53,6 +53,11 @@
     flex: 1 1 auto !important;
   }
 
+  .topbar .brand-mark {
+    transform: scale(1.045) !important;
+    transform-origin: center !important;
+  }
+
   .topbar .brand-copy strong {
     font-size: clamp(1.18rem, 4.65vw, 1.52rem) !important;
   }
@@ -70,23 +75,23 @@
     padding-right: 4px !important;
     white-space: nowrap !important;
     align-self: center !important;
-    background: rgba(255, 250, 244, 0.43) !important;
-    color: rgba(21, 20, 17, 0.80) !important;
-    border-color: rgba(113, 89, 58, 0.12) !important;
+    background: rgba(255, 250, 244, 0.37) !important;
+    color: rgba(21, 20, 17, 0.74) !important;
+    border-color: rgba(113, 89, 58, 0.105) !important;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.72),
-      0 5px 14px rgba(31, 26, 20, 0.045) !important;
-    backdrop-filter: blur(18px) saturate(1.05) !important;
-    -webkit-backdrop-filter: blur(18px) saturate(1.05) !important;
+      inset 0 1px 0 rgba(255, 255, 255, 0.68),
+      0 5px 14px rgba(31, 26, 20, 0.038) !important;
+    backdrop-filter: blur(22px) saturate(1.03) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(1.03) !important;
   }
 
   .topbar > .button::before {
     content: "Кабинет" !important;
-    font-size: 12.7px !important;
-    font-weight: 650 !important;
+    font-size: 12.8px !important;
+    font-weight: 620 !important;
     letter-spacing: -0.012em !important;
-    transform: translateX(2px) !important;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.34) !important;
+    transform: translateX(3px) !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.30) !important;
   }
 
   .topbar::after {
@@ -95,22 +100,24 @@
     height: 44px !important;
     flex: 0 0 44px !important;
     align-self: center !important;
-    border-color: rgba(126, 101, 68, 0.13) !important;
+    border-color: rgba(126, 101, 68, 0.105) !important;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.76),
-      inset 0 -1px 0 rgba(126, 101, 68, 0.065),
-      0 10px 23px rgba(31, 26, 20, 0.06) !important;
+      inset 0 1px 0 rgba(255, 255, 255, 0.70),
+      inset 0 -1px 0 rgba(126, 101, 68, 0.05),
+      0 10px 23px rgba(31, 26, 20, 0.048) !important;
+    backdrop-filter: blur(22px) saturate(1.03) !important;
+    -webkit-backdrop-filter: blur(22px) saturate(1.03) !important;
     background:
-      linear-gradient(rgba(21,20,17,.78), rgba(21,20,17,.78)) center calc(50% - 7px) / 21px 2px no-repeat,
-      linear-gradient(rgba(21,20,17,.70), rgba(21,20,17,.70)) calc(50% + 3px) center / 16px 2px no-repeat,
-      linear-gradient(rgba(21,20,17,.78), rgba(21,20,17,.78)) center calc(50% + 7px) / 21px 2px no-repeat,
-      rgba(255, 250, 244, 0.49) !important;
+      linear-gradient(rgba(21,20,17,.66), rgba(21,20,17,.66)) center calc(50% - 7px) / 21px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.58), rgba(21,20,17,.58)) calc(50% + 3px) center / 16px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.66), rgba(21,20,17,.66)) center calc(50% + 7px) / 21px 2px no-repeat,
+      rgba(255, 250, 244, 0.40) !important;
   }
 
   .topbar.is-menu-open::after {
     content: "×" !important;
-    background: rgba(255, 250, 244, 0.56) !important;
-    color: rgba(21,20,17,.76) !important;
+    background: rgba(255, 250, 244, 0.50) !important;
+    color: rgba(21,20,17,.70) !important;
     font-size: 27px !important;
     font-weight: 400 !important;
   }
@@ -169,6 +176,10 @@
     gap: 8px !important;
   }
 
+  .topbar .brand-mark {
+    transform: scale(1.04) !important;
+  }
+
   .topbar > .button {
     min-height: 34px !important;
     padding-left: 6px !important;
@@ -176,8 +187,8 @@
   }
 
   .topbar > .button::before {
-    font-size: 11.6px !important;
-    transform: translateX(2px) !important;
+    font-size: 11.7px !important;
+    transform: translateX(3px) !important;
   }
 
   .topbar::after {
