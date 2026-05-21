@@ -1,0 +1,38 @@
+name: Add author meta
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Insert author meta
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for p in Path('.').rglob('*.html'):
+              text = p.read_text(encoding='utf-8', errors='ignore')
+              if '@timetotechnic' in text:
+                  continue
+              if '<head>' in text:
+                  text = text.replace('<head>', '<head>\n  <meta name="author" content="@timetotechnic">\n  <meta name="designer" content="@timetotechnic">', 1)
+              if '<body' in text:
+                  i = text.find('>', text.find('<body'))
+                  if i != -1:
+                      text = text[:i+1] + '\n<!-- author: @timetotechnic -->' + text[i+1:]
+              p.write_text(text, encoding='utf-8')
+          PY
+      - name: Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet; then
+            git add .
+            git commit -m "Add author meta"
+            git push
+          fi
