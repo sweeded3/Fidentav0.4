@@ -1,0 +1,72 @@
+/* Mobile navigation fix for V4 */
+@media (max-width: 720px) {
+  .topbar {
+    position: sticky !important;
+    top: 0 !important;
+    left: auto !important;
+    width: 100% !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    padding: 14px !important;
+    background: rgba(17, 20, 24, 0.92) !important;
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .brand-copy strong {
+    font-size: 0.92rem !important;
+  }
+
+  .brand-copy span {
+    display: none !important;
+  }
+
+  .topbar .button-ghost {
+    min-height: 40px !important;
+    padding: 0 14px !important;
+    font-size: 0.82rem !important;
+    white-space: nowrap !important;
+  }
+
+  .topbar .nav {
+    display: none !important;
+  }
+
+  .hero {
+    padding-top: 44px !important;
+  }
+
+  .hero-inner {
+    padding-top: 0 !important;
+  }
+
+  .hero-stage {
+    gap: 20px !important;
+  }
+
+  .hero-aside {
+    display: none !important;
+  }
+
+  .hero h1 {
+    max-width: 11ch !important;
+    font-size: clamp(2.25rem, 11vw, 3.35rem) !important;
+    line-height: 1 !important;
+  }
+
+  .hero-text {
+    font-size: 0.98rem !important;
+    line-height: 1.62 !important;
+  }
+
+  .hero-actions {
+    gap: 10px !important;
+  }
+
+  .hero-actions .button {
+    width: 100% !important;
+    min-height: 46px !important;
+  }
+}
