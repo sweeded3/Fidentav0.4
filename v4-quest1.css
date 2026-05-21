@@ -1,0 +1,51 @@
+/* V4 Quest 1: header polish */
+
+.topbar > .button {
+  font-size: 0 !important;
+  min-width: 132px;
+}
+
+.topbar > .button::before {
+  content: "Войти в ЛК";
+  font-size: 0.96rem;
+  line-height: 1;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    gap: 12px;
+  }
+
+  .topbar .brand {
+    min-width: 0;
+    flex: 1 1 auto;
+  }
+
+  .topbar .brand-copy strong {
+    font-size: clamp(1.18rem, 4.9vw, 1.55rem) !important;
+  }
+
+  .topbar .brand-copy span {
+    font-size: clamp(0.72rem, 2.7vw, 0.9rem) !important;
+  }
+
+  .topbar > .button {
+    min-width: 112px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .topbar > .button::before {
+    font-size: 0.86rem;
+  }
+}
+
+.dashboard-actions .button:last-child {
+  font-size: 0 !important;
+}
+
+.dashboard-actions .button:last-child::before {
+  content: "Обсудить вложение";
+  font-size: 0.96rem;
+  line-height: 1;
+}
