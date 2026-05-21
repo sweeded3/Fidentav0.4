@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
+
 /* V4 Quest 1-2: header CTA, premium mobile menu, brand typography */
 
 .topbar .brand-copy strong {
@@ -21,7 +23,7 @@
   width: 21px;
   height: 21px;
   display: block;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(21,20,17,0.62)' stroke-width='1.85' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='4'/%3E%3Cpath d='M8 9h8'/%3E%3Cpath d='M8 15h5'/%3E%3Cpath d='M16.5 14.5l1.5 1.5 2.5-3'/%3E%3C/svg%3E") center / contain no-repeat;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgba(21,20,17,0.62)' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 10h2'/%3E%3Cpath d='M16 14h2'/%3E%3Cpath d='M6.17 15a3 3 0 0 1 5.66 0'/%3E%3Ccircle cx='9' cy='11' r='2'/%3E%3Crect x='3' y='5' width='18' height='14' rx='2'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .dashboard-actions .button:last-child {
@@ -36,7 +38,7 @@
 
 @media (max-width: 860px) {
   .topbar {
-    grid-template-columns: minmax(0, 1fr) auto auto !important;
+    grid-template-columns: minmax(0, 1fr) 44px 44px !important;
     align-items: center !important;
     gap: 10px !important;
     margin-bottom: 10px !important;
@@ -65,26 +67,34 @@
     display: none !important;
   }
 
-  .topbar > .button {
-    display: inline-flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    min-width: 0 !important;
+  .topbar > .button,
+  .topbar::after {
+    box-sizing: border-box !important;
     width: 44px !important;
     height: 44px !important;
+    min-width: 44px !important;
     min-height: 44px !important;
-    padding: 0 !important;
+    max-width: 44px !important;
+    max-height: 44px !important;
     border-radius: 999px !important;
     align-self: center !important;
-    background: rgba(255, 250, 244, 0.40) !important;
-    color: rgba(21, 20, 17, 0.70) !important;
-    border-color: rgba(126, 101, 68, 0.105) !important;
+    justify-self: center !important;
+    border: 1px solid rgba(126, 101, 68, 0.105) !important;
+    background-color: rgba(255, 250, 244, 0.40) !important;
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.70),
       inset 0 -1px 0 rgba(126, 101, 68, 0.05),
       0 10px 23px rgba(31, 26, 20, 0.048) !important;
     backdrop-filter: blur(22px) saturate(1.03) !important;
     -webkit-backdrop-filter: blur(22px) saturate(1.03) !important;
+  }
+
+  .topbar > .button {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    color: rgba(21, 20, 17, 0.70) !important;
   }
 
   .topbar > .button::before {
@@ -96,17 +106,8 @@
 
   .topbar::after {
     content: "" !important;
-    width: 44px !important;
-    height: 44px !important;
+    display: block !important;
     flex: 0 0 44px !important;
-    align-self: center !important;
-    border-color: rgba(126, 101, 68, 0.105) !important;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.70),
-      inset 0 -1px 0 rgba(126, 101, 68, 0.05),
-      0 10px 23px rgba(31, 26, 20, 0.048) !important;
-    backdrop-filter: blur(22px) saturate(1.03) !important;
-    -webkit-backdrop-filter: blur(22px) saturate(1.03) !important;
     background:
       linear-gradient(rgba(21,20,17,.66), rgba(21,20,17,.66)) center calc(50% - 7px) / 21px 2px no-repeat,
       linear-gradient(rgba(21,20,17,.58), rgba(21,20,17,.58)) calc(50% + 3px) center / 16px 2px no-repeat,
@@ -120,6 +121,8 @@
     color: rgba(21,20,17,.70) !important;
     font-size: 27px !important;
     font-weight: 400 !important;
+    line-height: 42px !important;
+    text-align: center !important;
   }
 
   .topbar .nav {
@@ -173,6 +176,7 @@
 
 @media (max-width: 420px) {
   .topbar {
+    grid-template-columns: minmax(0, 1fr) 42px 42px !important;
     gap: 8px !important;
   }
 
@@ -180,10 +184,14 @@
     transform: scale(1.08) !important;
   }
 
-  .topbar > .button {
+  .topbar > .button,
+  .topbar::after {
     width: 42px !important;
     height: 42px !important;
+    min-width: 42px !important;
     min-height: 42px !important;
+    max-width: 42px !important;
+    max-height: 42px !important;
   }
 
   .topbar > .button::before {
@@ -192,10 +200,12 @@
   }
 
   .topbar::after {
-    width: 42px !important;
-    height: 42px !important;
     flex-basis: 42px !important;
     background-size: 19px 2px, 15px 2px, 19px 2px, auto !important;
+  }
+
+  .topbar.is-menu-open::after {
+    line-height: 40px !important;
   }
 
   .topbar .nav {
