@@ -24,7 +24,8 @@
 @media (max-width: 860px) {
   .topbar {
     grid-template-columns: minmax(0, 1fr) auto auto !important;
-    gap: 12px !important;
+    gap: 10px !important;
+    margin-bottom: 10px !important;
     background: linear-gradient(135deg, rgba(252, 247, 239, 0.88), rgba(235, 224, 209, 0.72)) !important;
     border-color: rgba(255, 255, 255, 0.72) !important;
     box-shadow:
@@ -38,7 +39,7 @@
   }
 
   .topbar .brand-copy strong {
-    font-size: clamp(1.18rem, 4.9vw, 1.55rem) !important;
+    font-size: clamp(1.1rem, 4.4vw, 1.42rem) !important;
   }
 
   .topbar .brand-copy span {
@@ -48,35 +49,51 @@
   .topbar > .button {
     display: inline-flex !important;
     min-width: 0 !important;
-    min-height: 46px !important;
-    padding: 0 16px !important;
+    min-height: 40px !important;
+    padding: 0 13px !important;
     white-space: nowrap !important;
-    background: rgba(255, 250, 244, 0.62) !important;
+    background: rgba(255, 250, 244, 0.54) !important;
     color: #151411 !important;
-    border-color: rgba(17, 20, 24, 0.12) !important;
+    border-color: rgba(17, 20, 24, 0.105) !important;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.76),
-      0 12px 28px rgba(31, 26, 20, 0.10) !important;
+      inset 0 1px 0 rgba(255, 255, 255, 0.78),
+      0 8px 20px rgba(31, 26, 20, 0.075) !important;
     backdrop-filter: blur(18px) saturate(1.08) !important;
     -webkit-backdrop-filter: blur(18px) saturate(1.08) !important;
   }
 
   .topbar > .button::before {
-    font-size: 14px !important;
+    font-size: 12.8px !important;
+    font-weight: 650 !important;
   }
 
   .topbar::after {
-    background: rgba(255, 250, 244, 0.66) !important;
-    border-color: rgba(17, 20, 24, 0.14) !important;
+    content: "" !important;
+    width: 44px !important;
+    height: 44px !important;
+    flex: 0 0 44px !important;
+    background:
+      linear-gradient(#151411, #151411) center calc(50% - 7px) / 20px 2px no-repeat,
+      linear-gradient(#151411, #151411) center / 20px 2px no-repeat,
+      linear-gradient(#151411, #151411) center calc(50% + 7px) / 20px 2px no-repeat,
+      rgba(255, 250, 244, 0.58) !important;
+    border-color: rgba(17, 20, 24, 0.13) !important;
     box-shadow:
       inset 0 1px 0 rgba(255, 255, 255, 0.72),
-      0 12px 28px rgba(31, 26, 20, 0.08) !important;
+      0 10px 22px rgba(31, 26, 20, 0.07) !important;
+  }
+
+  .topbar.is-menu-open::after {
+    content: "×" !important;
+    background: rgba(255, 250, 244, 0.62) !important;
+    font-size: 27px !important;
+    font-weight: 400 !important;
   }
 
   .topbar .nav {
     left: 10px !important;
     right: 10px !important;
-    top: calc(100% + 18px) !important;
+    top: calc(100% + 22px) !important;
     padding: 18px 20px 20px !important;
     border-radius: 30px !important;
     background: linear-gradient(145deg, rgba(252, 247, 239, 0.94), rgba(226, 215, 199, 0.90)) !important;
@@ -120,19 +137,30 @@
 }
 
 @media (max-width: 420px) {
+  .topbar {
+    gap: 8px !important;
+  }
+
   .topbar > .button {
-    min-height: 42px !important;
-    padding: 0 12px !important;
+    min-height: 38px !important;
+    padding: 0 10px !important;
   }
 
   .topbar > .button::before {
-    font-size: 12.5px !important;
+    font-size: 11.8px !important;
+  }
+
+  .topbar::after {
+    width: 40px !important;
+    height: 40px !important;
+    flex-basis: 40px !important;
+    background-size: 18px 2px, 18px 2px, 18px 2px, auto !important;
   }
 
   .topbar .nav {
     left: 6px !important;
     right: 6px !important;
-    top: calc(100% + 16px) !important;
+    top: calc(100% + 18px) !important;
   }
 
   .topbar .nav a {
