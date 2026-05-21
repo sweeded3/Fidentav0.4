@@ -1,13 +1,28 @@
-/* V4 Quest 1-2: header CTA and premium mobile menu */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap');
+
+/* V4 Quest 1-2: header CTA, premium mobile menu, brand typography */
+
+.topbar .brand-copy strong {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.035em !important;
+  line-height: 0.95 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.30), 0 10px 22px rgba(17,20,24,0.05) !important;
+}
 
 .topbar > .button {
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   font-size: 0 !important;
-  min-width: 112px;
+  min-width: auto !important;
+  width: auto !important;
 }
 
 .topbar > .button::before {
   content: "Кабинет" !important;
+  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   font-size: 0.92rem;
+  font-weight: 680;
+  letter-spacing: -0.01em;
   line-height: 1;
 }
 
@@ -24,6 +39,7 @@
 @media (max-width: 860px) {
   .topbar {
     grid-template-columns: minmax(0, 1fr) auto auto !important;
+    align-items: center !important;
     gap: 10px !important;
     margin-bottom: 10px !important;
     background: linear-gradient(135deg, rgba(252, 247, 239, 0.88), rgba(235, 224, 209, 0.72)) !important;
@@ -39,7 +55,7 @@
   }
 
   .topbar .brand-copy strong {
-    font-size: clamp(1.1rem, 4.4vw, 1.42rem) !important;
+    font-size: clamp(1.26rem, 5.2vw, 1.66rem) !important;
   }
 
   .topbar .brand-copy span {
@@ -48,10 +64,13 @@
 
   .topbar > .button {
     display: inline-flex !important;
-    min-width: 0 !important;
-    min-height: 36px !important;
-    padding: 0 11px !important;
+    min-width: auto !important;
+    width: auto !important;
+    min-height: 40px !important;
+    padding-left: 8px !important;
+    padding-right: 7px !important;
     white-space: nowrap !important;
+    align-self: center !important;
     background: rgba(255, 250, 244, 0.48) !important;
     color: #151411 !important;
     border-color: rgba(113, 89, 58, 0.15) !important;
@@ -64,25 +83,28 @@
 
   .topbar > .button::before {
     content: "Кабинет" !important;
-    font-size: 11.8px !important;
-    font-weight: 650 !important;
-    letter-spacing: 0.01em !important;
+    font-size: 13.5px !important;
+    font-weight: 680 !important;
+    letter-spacing: -0.01em !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.36) !important;
   }
 
   .topbar::after {
     content: "" !important;
-    width: 44px !important;
-    height: 44px !important;
-    flex: 0 0 44px !important;
-    background:
-      linear-gradient(#151411, #151411) center calc(50% - 7px) / 20px 2px no-repeat,
-      linear-gradient(#151411, #151411) center / 20px 2px no-repeat,
-      linear-gradient(#151411, #151411) center calc(50% + 7px) / 20px 2px no-repeat,
-      rgba(255, 250, 244, 0.58) !important;
-    border-color: rgba(113, 89, 58, 0.18) !important;
+    width: 46px !important;
+    height: 46px !important;
+    flex: 0 0 46px !important;
+    align-self: center !important;
+    border-color: rgba(126, 101, 68, 0.16) !important;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.72),
-      0 10px 22px rgba(31, 26, 20, 0.07) !important;
+      inset 0 1px 0 rgba(255, 255, 255, 0.82),
+      inset 0 -1px 0 rgba(126, 101, 68, 0.08),
+      0 12px 26px rgba(31, 26, 20, 0.08) !important;
+    background:
+      linear-gradient(rgba(21,20,17,.94), rgba(21,20,17,.94)) center calc(50% - 7px) / 21px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.88), rgba(21,20,17,.88)) calc(50% + 3px) center / 16px 2px no-repeat,
+      linear-gradient(rgba(21,20,17,.94), rgba(21,20,17,.94)) center calc(50% + 7px) / 21px 2px no-repeat,
+      rgba(255, 250, 244, 0.55) !important;
   }
 
   .topbar.is-menu-open::after {
@@ -147,81 +169,6 @@
   }
 
   .topbar > .button {
-    min-height: 34px !important;
-    padding: 0 9px !important;
-  }
-
-  .topbar > .button::before {
-    content: "Кабинет" !important;
-    font-size: 10.9px !important;
-  }
-
-  .topbar::after {
-    width: 40px !important;
-    height: 40px !important;
-    flex-basis: 40px !important;
-    background-size: 18px 2px, 18px 2px, 18px 2px, auto !important;
-  }
-
-  .topbar .nav {
-    left: 6px !important;
-    right: 6px !important;
-    top: calc(100% + 18px) !important;
-  }
-
-  .topbar .nav a {
-    font-size: 15px !important;
-  }
-}
-/* V4 small header polish */
-@media (max-width: 860px) {
-  .topbar {
-    align-items: center !important;
-  }
-
-  .topbar .brand-copy strong {
-    font-weight: 760 !important;
-    letter-spacing: -0.035em !important;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.32), 0 10px 22px rgba(17,20,24,0.055) !important;
-  }
-
-  .topbar > .button {
-    min-width: auto !important;
-    width: auto !important;
-    min-height: 40px !important;
-    padding-left: 8px !important;
-    padding-right: 7px !important;
-    align-self: center !important;
-  }
-
-  .topbar > .button::before {
-    content: "Кабинет" !important;
-    font-size: 13.5px !important;
-    font-weight: 680 !important;
-    letter-spacing: -0.01em !important;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.36) !important;
-  }
-
-  .topbar::after {
-    width: 46px !important;
-    height: 46px !important;
-    flex-basis: 46px !important;
-    align-self: center !important;
-    border-color: rgba(126, 101, 68, 0.16) !important;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.82),
-      inset 0 -1px 0 rgba(126, 101, 68, 0.08),
-      0 12px 26px rgba(31, 26, 20, 0.08) !important;
-    background:
-      linear-gradient(rgba(21,20,17,.94), rgba(21,20,17,.94)) center calc(50% - 7px) / 21px 2px no-repeat,
-      linear-gradient(rgba(21,20,17,.88), rgba(21,20,17,.88)) calc(50% + 3px) center / 16px 2px no-repeat,
-      linear-gradient(rgba(21,20,17,.94), rgba(21,20,17,.94)) center calc(50% + 7px) / 21px 2px no-repeat,
-      rgba(255, 250, 244, 0.55) !important;
-  }
-}
-
-@media (max-width: 420px) {
-  .topbar > .button {
     min-height: 38px !important;
     padding-left: 7px !important;
     padding-right: 6px !important;
@@ -236,5 +183,15 @@
     height: 42px !important;
     flex-basis: 42px !important;
     background-size: 19px 2px, 15px 2px, 19px 2px, auto !important;
+  }
+
+  .topbar .nav {
+    left: 6px !important;
+    right: 6px !important;
+    top: calc(100% + 18px) !important;
+  }
+
+  .topbar .nav a {
+    font-size: 15px !important;
   }
 }
