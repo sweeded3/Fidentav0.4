@@ -49,3 +49,37 @@
   font-size: 0.96rem;
   line-height: 1;
 }
+
+/* V4 Quest 1.1: keep the account CTA visible in mobile public headers */
+@media (max-width: 860px) {
+  .topbar {
+    grid-template-columns: minmax(0, 1fr) auto auto !important;
+  }
+
+  .topbar > .button {
+    display: inline-flex !important;
+    min-width: 0 !important;
+    min-height: 46px !important;
+    padding: 0 14px !important;
+    white-space: nowrap !important;
+    background: #151411 !important;
+    color: #f7efe2 !important;
+    border-color: rgba(21, 20, 17, 0.92) !important;
+    box-shadow: 0 12px 28px rgba(21, 20, 17, 0.14) !important;
+  }
+
+  .topbar > .button::before {
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .topbar > .button {
+    min-height: 42px !important;
+    padding: 0 11px !important;
+  }
+
+  .topbar > .button::before {
+    font-size: 12.5px !important;
+  }
+}
