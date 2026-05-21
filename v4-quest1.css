@@ -173,3 +173,41 @@
     font-size: 15px !important;
   }
 }
+/* V4 small header polish */
+@media (max-width: 860px) {
+  .topbar > .button {
+    min-width: auto !important;
+    width: auto !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  .topbar > .button::before {
+    content: "Кабинет" !important;
+    font-size: 12.6px !important;
+    letter-spacing: 0.005em !important;
+  }
+
+  .topbar::after {
+    background:
+      linear-gradient(#151411, #151411) center calc(50% - 7px) / 21px 2px no-repeat,
+      linear-gradient(#151411, #151411) calc(50% + 3px) center / 16px 2px no-repeat,
+      linear-gradient(#151411, #151411) center calc(50% + 7px) / 21px 2px no-repeat,
+      rgba(255, 250, 244, 0.58) !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .topbar > .button {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .topbar > .button::before {
+    font-size: 11.3px !important;
+  }
+
+  .topbar::after {
+    background-size: 19px 2px, 15px 2px, 19px 2px, auto !important;
+  }
+}
