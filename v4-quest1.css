@@ -178,36 +178,47 @@
   .topbar > .button {
     min-width: auto !important;
     width: auto !important;
-    padding-left: 9px !important;
-    padding-right: 9px !important;
+    padding-left: 8px !important;
+    padding-right: 7px !important;
   }
 
   .topbar > .button::before {
     content: "Кабинет" !important;
-    font-size: 12.6px !important;
-    letter-spacing: 0.005em !important;
+    font-size: 13.1px !important;
+    letter-spacing: 0 !important;
   }
 
   .topbar::after {
+    width: 46px !important;
+    height: 46px !important;
+    flex-basis: 46px !important;
+    border-color: rgba(126, 101, 68, 0.16) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.82),
+      inset 0 -1px 0 rgba(126, 101, 68, 0.08),
+      0 12px 26px rgba(31, 26, 20, 0.08) !important;
     background:
       linear-gradient(#151411, #151411) center calc(50% - 7px) / 21px 2px no-repeat,
       linear-gradient(#151411, #151411) calc(50% + 3px) center / 16px 2px no-repeat,
       linear-gradient(#151411, #151411) center calc(50% + 7px) / 21px 2px no-repeat,
-      rgba(255, 250, 244, 0.58) !important;
+      rgba(255, 250, 244, 0.55) !important;
   }
 }
 
 @media (max-width: 420px) {
   .topbar > .button {
-    padding-left: 8px !important;
-    padding-right: 8px !important;
+    padding-left: 7px !important;
+    padding-right: 6px !important;
   }
 
   .topbar > .button::before {
-    font-size: 11.3px !important;
+    font-size: 11.8px !important;
   }
 
   .topbar::after {
+    width: 42px !important;
+    height: 42px !important;
+    flex-basis: 42px !important;
     background-size: 19px 2px, 15px 2px, 19px 2px, auto !important;
   }
 }
