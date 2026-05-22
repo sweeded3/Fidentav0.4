@@ -52,4 +52,21 @@
   window.addEventListener('resize', () => {
     if (window.innerWidth > 860) closeAll();
   });
+
+  const asset = document.querySelector('.asset-story');
+  if (asset) {
+    const title = asset.querySelector('.asset-copy h2');
+    const text = asset.querySelector('.asset-copy > p:not(.eyebrow)');
+    const metricTitles = asset.querySelectorAll('.metrics-row span');
+    const metricTexts = asset.querySelectorAll('.metrics-row p');
+
+    if (title) title.textContent = 'Портфель под управлением, а не просто перечень площадей.';
+    if (text) text.textContent = 'Фидента собирает вокруг объекта операционный контур: арендаторы, документы, финансовая модель и понятные точки контроля для собственника или инвестора.';
+
+    if (metricTitles[0]) metricTitles[0].textContent = 'Доходность';
+    if (metricTexts[0]) metricTexts[0].textContent = 'модель аренды, платежи, прогноз и контроль ключевых показателей';
+
+    if (metricTitles[1]) metricTitles[1].textContent = 'Контроль';
+    if (metricTexts[1]) metricTexts[1].textContent = 'управление объектом, обращениями, подрядчиками и отчетностью';
+  }
 })();
