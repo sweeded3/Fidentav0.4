@@ -21,7 +21,14 @@
     mark.classList.toggle('is-moon');
   };
 
-  document.querySelectorAll('.topbar .brand-mark').forEach((mark) => {
+  document.querySelectorAll('.topbar .brand').forEach((brand) => {
+    const mark = brand.querySelector('.brand-mark');
+    if (!mark) return;
+
+    mark.setAttribute('role', 'button');
+    mark.setAttribute('aria-label', 'Переключить вид знака');
+    mark.setAttribute('tabindex', '-1');
+
     mark.addEventListener('pointerdown', (event) => toggleMoon(mark, event));
     mark.addEventListener('click', (event) => toggleMoon(mark, event));
   });
@@ -32,6 +39,7 @@
 
     topbar.addEventListener('click', (event) => {
       if (!isMobile()) return;
+      if (event.target.closest('.brand')) return;
 
       const point = event.touches ? event.touches[0] : event;
       if (!point) return;
