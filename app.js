@@ -1,3 +1,17 @@
+const navigationLogoStyle = document.createElement("style");
+navigationLogoStyle.textContent = `
+  .brand-mark {
+    width: 28px;
+    height: 28px;
+    box-shadow: none;
+  }
+
+  .brand-dark .brand-mark {
+    box-shadow: none;
+  }
+`;
+document.head.appendChild(navigationLogoStyle);
+
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const hasDesktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 
