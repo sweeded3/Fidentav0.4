@@ -1,0 +1,8 @@
+@media (max-width: 860px) {
+  body .site-shell .topbar > .button::before,
+  body .site-shell-light .topbar > .button::before,
+  body .site-shell .topbar > .mobile-cabinet-link::before,
+  body .site-shell-light .topbar > .mobile-cabinet-link::before {
+    left: calc(50% + 0.5px) !important;
+  }
+}
