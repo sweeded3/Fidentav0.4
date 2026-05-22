@@ -5,8 +5,54 @@
 @media (max-width: 860px) {
   body .site-shell .topbar,
   body .site-shell-light .topbar {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: calc(100% - 28px) !important;
+    max-width: none !important;
+    min-height: 70px !important;
+    height: auto !important;
+    margin: 14px auto 0 !important;
+    padding: 12px 14px !important;
+    display: grid !important;
     grid-template-columns: minmax(0, 1fr) 44px 44px !important;
+    align-items: center !important;
     gap: 10px !important;
+    border-radius: 999px !important;
+    z-index: 100 !important;
+  }
+
+  body .site-shell .topbar .brand,
+  body .site-shell-light .topbar .brand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-width: 0 !important;
+    gap: 14px !important;
+  }
+
+  body .site-shell .topbar .brand-mark,
+  body .site-shell-light .topbar .brand-mark {
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+    max-width: 46px !important;
+    max-height: 46px !important;
+    flex: 0 0 46px !important;
+  }
+
+  body .site-shell .topbar .brand-copy strong,
+  body .site-shell-light .topbar .brand-copy strong {
+    font-size: clamp(1.18rem, 5.1vw, 1.5rem) !important;
+    line-height: 1 !important;
+  }
+
+  body .site-shell .topbar .brand-copy span,
+  body .site-shell-light .topbar .brand-copy span {
+    display: none !important;
   }
 
   body .site-shell .topbar > .button,
@@ -65,6 +111,8 @@
 
   body .site-shell .topbar::after,
   body .site-shell-light .topbar::after {
+    content: "" !important;
+    display: block !important;
     grid-column: 3 !important;
     grid-row: 1 !important;
     width: 44px !important;
@@ -72,6 +120,7 @@
     min-width: 44px !important;
     min-height: 44px !important;
     justify-self: center !important;
+    align-self: center !important;
     box-sizing: border-box !important;
     border-radius: 999px !important;
     border: 1px solid rgba(126, 101, 68, 0.105) !important;
@@ -83,6 +132,23 @@
       0 10px 23px rgba(31, 26, 20, 0.045) !important;
     -webkit-mask: none !important;
     mask: none !important;
+  }
+
+  body .site-shell .topbar.is-menu-open::after,
+  body .site-shell-light .topbar.is-menu-open::after {
+    content: "×" !important;
+    background: linear-gradient(135deg, rgba(255, 250, 244, 0.46), rgba(238, 229, 216, 0.36)) !important;
+    color: rgba(21, 20, 17, 0.70) !important;
+    font-size: 27px !important;
+    line-height: 42px !important;
+    text-align: center !important;
+  }
+
+  body .site-shell .topbar .nav,
+  body .site-shell-light .topbar .nav {
+    left: 10px !important;
+    right: 10px !important;
+    top: calc(100% + 12px) !important;
   }
 
   .hero .hero-actions,
@@ -103,8 +169,22 @@
 @media (max-width: 420px) {
   body .site-shell .topbar,
   body .site-shell-light .topbar {
+    width: calc(100% - 22px) !important;
+    min-height: 64px !important;
+    padding: 10px 12px !important;
     grid-template-columns: minmax(0, 1fr) 42px 42px !important;
     gap: 8px !important;
+  }
+
+  body .site-shell .topbar .brand-mark,
+  body .site-shell-light .topbar .brand-mark {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    min-height: 42px !important;
+    max-width: 42px !important;
+    max-height: 42px !important;
+    flex-basis: 42px !important;
   }
 
   body .site-shell .topbar > .button,
