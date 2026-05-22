@@ -1,0 +1,30 @@
+@media (max-width: 860px) {
+  .page-hero,
+  .page-hero-light {
+    min-height: auto !important;
+    padding-top: 44px !important;
+    padding-bottom: 52px !important;
+    grid-template-columns: 1fr !important;
+    grid-template-areas:
+      "copy"
+      "panel" !important;
+    gap: 22px !important;
+  }
+
+  .page-hero-copy {
+    padding: 0 !important;
+  }
+
+  .page-hero-media {
+    display: none !important;
+  }
+
+  .page-hero-panel {
+    margin-top: 8px !important;
+  }
+
+  .section {
+    padding-top: 56px !important;
+    padding-bottom: 56px !important;
+  }
+}
