@@ -19,7 +19,7 @@
       if (!point) return;
 
       const rect = topbar.getBoundingClientRect();
-      const clickedBurger = point.clientX >= rect.right - 64;
+      const clickedBurger = point.clientX >= rect.right - 52;
       if (!clickedBurger) return;
 
       event.preventDefault();
