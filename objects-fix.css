@@ -1,7 +1,7 @@
 @media (min-width: 861px) {
   .portfolio-grid {
     padding-top: 72px !important;
-    padding-bottom: 10px !important;
+    padding-bottom: 42px !important;
   }
 
   .portfolio-grid .section-heading {
@@ -54,9 +54,9 @@
   }
 
   .showcase-band {
-    padding-top: 0 !important;
-    padding-bottom: 12px !important;
-    margin-top: -58px !important;
+    padding-top: 34px !important;
+    padding-bottom: 34px !important;
+    margin-top: 0 !important;
   }
 
   .showcase-band .showcase-panel {
@@ -64,9 +64,9 @@
   }
 
   .contact-band {
-    padding-top: 0 !important;
-    padding-bottom: 70px !important;
-    margin-top: -62px !important;
+    padding-top: 34px !important;
+    padding-bottom: 82px !important;
+    margin-top: 0 !important;
   }
 
   .contact-band .callout-wrap {
