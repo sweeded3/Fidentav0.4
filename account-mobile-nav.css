@@ -7,6 +7,7 @@
     display: block !important;
     padding-top: 10px !important;
     background: #f5f1ea !important;
+    color: var(--ink) !important;
   }
 
   .dashboard-mobile-topbar {
@@ -58,6 +59,7 @@
 
   .dashboard-main {
     padding: 4px 16px 30px !important;
+    color: var(--ink) !important;
   }
 
   .dashboard-topbar {
@@ -65,15 +67,18 @@
     gap: 10px !important;
     margin-top: 0 !important;
     margin-bottom: 14px !important;
+    color: var(--ink) !important;
   }
 
   .dashboard-topbar h1 {
     font-size: clamp(2rem, 11vw, 3.05rem) !important;
     margin: 0 !important;
+    color: var(--ink) !important;
   }
 
   .dashboard-topbar .eyebrow {
     margin-bottom: 8px !important;
+    color: var(--gold) !important;
   }
 
   .dashboard-topbar-side {
@@ -85,6 +90,17 @@
     min-width: 0 !important;
     width: 100% !important;
     padding: 10px 14px !important;
+    background: rgba(255, 250, 244, 0.62) !important;
+    border-color: rgba(17, 20, 24, 0.08) !important;
+    color: var(--ink) !important;
+  }
+
+  .dashboard-session span {
+    color: rgba(80, 88, 97, 0.76) !important;
+  }
+
+  .dashboard-session strong {
+    color: rgba(17, 20, 24, 0.86) !important;
   }
 
   .dashboard-actions {
@@ -94,12 +110,29 @@
   .dashboard-hero {
     min-height: auto !important;
     border-radius: 28px !important;
+    color: #f8faf6 !important;
   }
 
   .dashboard-hero-content {
     grid-template-columns: 1fr !important;
     gap: 16px !important;
     padding: 22px 20px !important;
+  }
+
+  .dashboard-hero .eyebrow {
+    color: var(--gold) !important;
+  }
+
+  .dashboard-intro h2,
+  .dashboard-kpis span,
+  .dashboard-rail-list strong {
+    color: #f8faf6 !important;
+  }
+
+  .dashboard-intro p:last-child,
+  .dashboard-kpis p,
+  .dashboard-rail-list p {
+    color: rgba(237, 240, 235, 0.72) !important;
   }
 
   .dashboard-kpis {
@@ -114,6 +147,33 @@
   .dashboard-grid {
     gap: 14px !important;
     margin-top: 16px !important;
+    color: var(--ink) !important;
+  }
+
+  .dashboard-panel {
+    background: rgba(255, 250, 244, 0.68) !important;
+    border-color: rgba(17, 20, 24, 0.08) !important;
+    color: var(--ink) !important;
+  }
+
+  .dashboard-panel h3,
+  .dashboard-panel strong,
+  .finance-lines strong {
+    color: var(--ink) !important;
+  }
+
+  .tenant-list span,
+  .doc-list span,
+  .activity-feed p,
+  .finance-lines span {
+    color: rgba(80, 88, 97, 0.78) !important;
+  }
+
+  .tenant-list article,
+  .doc-list article,
+  .activity-feed article,
+  .finance-lines div {
+    border-top-color: rgba(17, 20, 24, 0.08) !important;
   }
 }
 
