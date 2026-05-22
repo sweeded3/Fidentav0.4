@@ -1,3 +1,7 @@
+.mobile-cabinet-link {
+  display: none !important;
+}
+
 @media (max-width: 860px) {
   .topbar {
     grid-template-columns: minmax(0, 1fr) 44px 44px !important;
