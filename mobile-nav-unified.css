@@ -2,6 +2,16 @@
   display: none !important;
 }
 
+.brand-mark {
+  cursor: pointer !important;
+  transition: background 220ms ease, box-shadow 220ms ease, transform 220ms ease !important;
+}
+
+.brand-mark.is-moon {
+  background: radial-gradient(circle at 66% 34%, rgba(245, 241, 234, 0.98) 0 21%, transparent 22%), linear-gradient(135deg, #5f6570, #c9c1b3) !important;
+  box-shadow: none !important;
+}
+
 @media (min-width: 861px) {
   body .site-shell .topbar,
   body .site-shell-light .topbar {
