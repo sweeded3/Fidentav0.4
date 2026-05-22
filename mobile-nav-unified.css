@@ -2,21 +2,15 @@
   display: none !important;
 }
 
-.brand-mark {
-  cursor: pointer !important;
-  transition: background 220ms ease, box-shadow 220ms ease, transform 220ms ease !important;
-}
-
-.brand-mark.is-moon {
-  background: radial-gradient(circle at 66% 34%, rgba(245, 241, 234, 0.98) 0 21%, transparent 22%), linear-gradient(135deg, #5f6570, #c9c1b3) !important;
-  box-shadow: none !important;
-}
-
 @media (min-width: 861px) {
   body .site-shell .topbar,
   body .site-shell-light .topbar {
     position: absolute !important;
     top: 20px !important;
+  }
+
+  .brand-mark.is-moon {
+    background: linear-gradient(135deg, var(--gold), #f0dcc4) !important;
   }
 }
 
@@ -65,6 +59,16 @@
     max-width: 46px !important;
     max-height: 46px !important;
     flex: 0 0 46px !important;
+    cursor: pointer !important;
+    transition: background 180ms ease !important;
+  }
+
+  body .site-shell .topbar .brand-mark.is-moon,
+  body .site-shell-light .topbar .brand-mark.is-moon {
+    background:
+      radial-gradient(circle at 67% 32%, rgba(245, 241, 234, 0.96) 0 22%, transparent 23%),
+      linear-gradient(135deg, #5f6570, #c9c1b3) !important;
+    box-shadow: none !important;
   }
 
   body .site-shell .topbar .brand-copy strong,
