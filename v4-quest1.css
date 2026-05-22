@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 
-/* V4 Quest 1-2: header CTA, premium mobile menu, brand typography */
+/* Fidenta v4 stabilization layer. Visual overrides live here; JS contains behavior only. */
 
 .topbar {
   background: linear-gradient(135deg, rgba(252, 247, 239, 0.84), rgba(226, 215, 199, 0.66)) !important;
@@ -14,6 +14,30 @@
 
 .topbar.is-condensed {
   background: linear-gradient(135deg, rgba(252, 247, 239, 0.90), rgba(226, 215, 199, 0.72)) !important;
+}
+
+.topbar .brand {
+  gap: 16px !important;
+}
+
+.topbar .brand-mark,
+.topbar.brand-dark .brand-mark,
+.brand-dark .brand-mark {
+  display: block !important;
+  width: 46px !important;
+  height: 46px !important;
+  min-width: 46px !important;
+  min-height: 46px !important;
+  max-width: 46px !important;
+  max-height: 46px !important;
+  flex: 0 0 46px !important;
+  aspect-ratio: 1 / 1 !important;
+  border-radius: 50% !important;
+  border: 0 !important;
+  outline: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
+  background: linear-gradient(135deg, var(--gold), #f0dcc4) !important;
 }
 
 .topbar .brand-copy {
@@ -33,12 +57,6 @@
   color: rgba(21, 20, 17, 0.58) !important;
 }
 
-.topbar .brand-mark {
-  transform: scale(1.12) !important;
-  transform-origin: center !important;
-  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.12) !important;
-}
-
 .topbar .nav {
   color: rgba(21, 20, 17, 0.72) !important;
   font-weight: 560 !important;
@@ -46,32 +64,6 @@
 
 .topbar .nav a::after {
   background: rgba(21, 20, 17, 0.42) !important;
-}
-
-.topbar > .button {
-  font-family: "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
-  font-size: 0 !important;
-  min-width: auto !important;
-  width: auto !important;
-}
-
-.topbar > .button::before {
-  content: "" !important;
-  width: 21px;
-  height: 21px;
-  display: block;
-  background: url("./assets/fidenta-account-icon.svg") center / contain no-repeat;
-  opacity: 0.72;
-}
-
-.dashboard-actions .button:last-child {
-  font-size: 0 !important;
-}
-
-.dashboard-actions .button:last-child::before {
-  content: "Обсудить вложение";
-  font-size: 0.96rem;
-  line-height: 1;
 }
 
 .hero-actions .button,
@@ -117,11 +109,6 @@
     0 14px 34px rgba(31,26,20,0.07) !important;
 }
 
-.hero-actions .button-secondary:hover,
-.section-button.button-secondary:hover {
-  background: linear-gradient(135deg, rgba(255,250,244,0.88), rgba(240,232,221,0.72)) !important;
-}
-
 .intro {
   padding-bottom: 34px !important;
 }
@@ -152,15 +139,100 @@
   margin-bottom: 14px !important;
 }
 
+@media (min-width: 861px) {
+  .topbar {
+    min-height: 74px !important;
+    padding: 14px 22px !important;
+  }
+
+  .topbar::after {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    min-width: 0 !important;
+    flex-basis: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: none !important;
+  }
+
+  .topbar .brand-copy strong {
+    font-size: 1.08rem !important;
+  }
+
+  .topbar > .button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    min-width: 158px !important;
+    max-width: none !important;
+    height: 44px !important;
+    min-height: 44px !important;
+    max-height: 44px !important;
+    padding: 0 24px !important;
+    margin-left: 18px !important;
+    border-radius: 999px !important;
+    font-size: 0.94rem !important;
+    line-height: 1 !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.01em !important;
+    color: rgba(21,20,17,.84) !important;
+    border: 1px solid rgba(126,101,68,.14) !important;
+    background: linear-gradient(135deg, rgba(255,250,244,.64), rgba(234,224,210,.46)) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,.74),
+      inset 0 -1px 0 rgba(126,101,68,.06),
+      0 12px 24px rgba(31,26,20,.06) !important;
+    backdrop-filter: blur(18px) saturate(1.04) !important;
+    -webkit-backdrop-filter: blur(18px) saturate(1.04) !important;
+  }
+
+  .topbar > .button::before {
+    display: none !important;
+    content: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: none !important;
+  }
+
+  .hero {
+    min-height: 88svh !important;
+    padding-top: 104px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .hero-inner {
+    min-height: calc(88svh - 138px) !important;
+    align-content: center !important;
+    gap: 22px !important;
+  }
+
+  .hero-stage {
+    align-items: center !important;
+  }
+
+  .hero-text {
+    margin-top: 18px !important;
+  }
+
+  .hero-actions {
+    margin-top: 24px !important;
+  }
+}
+
+/* Footer */
 .footer.footer-finished {
   width: var(--content) !important;
   max-width: 1320px !important;
   margin: 0 auto 44px !important;
   padding: 42px 46px 34px !important;
   display: grid !important;
-  grid-template-columns: minmax(0, 1fr) auto !important;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr) !important;
   gap: 26px !important;
-  align-items: start !important;
+  align-items: stretch !important;
   overflow: hidden !important;
   border-radius: 32px !important;
   background: #111418 !important;
@@ -170,13 +242,15 @@
 
 .footer-finished .footer-main {
   display: grid !important;
-  grid-template-columns: minmax(170px, 1.05fr) minmax(130px, .65fr) minmax(170px, .78fr) minmax(220px, 1fr) !important;
+  grid-template-columns: minmax(190px, 1fr) minmax(140px, .72fr) minmax(200px, .9fr) !important;
   gap: 14px !important;
   min-width: 0 !important;
+  padding: 0 !important;
 }
 
 .footer-finished .footer-brand-block,
-.footer-finished .footer-col {
+.footer-finished .footer-col,
+.footer-finished .demo-footer-nav {
   min-width: 0 !important;
   padding: 20px !important;
   border-radius: 22px !important;
@@ -184,14 +258,23 @@
   border: 1px solid rgba(255,255,255,0.075) !important;
 }
 
+.footer-finished .footer-brand {
+  margin-bottom: 20px !important;
+}
+
+.footer-finished .footer-brand .brand-mark {
+  display: none !important;
+}
+
 .footer-finished .footer-brand-block p,
 .footer-finished .footer-col a {
-  font-size: 0.88rem !important;
+  font-size: 0.9rem !important;
   line-height: 1.55 !important;
 }
 
 .footer-finished .footer-col a {
   display: block !important;
+  margin-bottom: 12px !important;
 }
 
 .footer-finished .footer-title,
@@ -205,18 +288,15 @@
 }
 
 .footer-finished .demo-footer-nav {
-  justify-self: end !important;
+  justify-self: stretch !important;
   align-self: stretch !important;
-  min-width: 210px !important;
-  padding: 20px !important;
-  border-radius: 22px !important;
+  min-width: 0 !important;
+  margin: 0 !important;
   display: flex !important;
   flex-wrap: wrap !important;
   align-content: flex-start !important;
   align-items: center !important;
   gap: 10px !important;
-  background: rgba(255,255,255,0.032) !important;
-  border: 1px solid rgba(255,255,255,0.075) !important;
 }
 
 .footer-finished .demo-footer-nav span {
@@ -224,8 +304,10 @@
 }
 
 .footer-finished .demo-footer-nav a {
-  width: 34px !important;
+  width: auto !important;
+  min-width: 34px !important;
   height: 34px !important;
+  padding: 0 12px !important;
   border-radius: 999px !important;
   display: inline-flex !important;
   align-items: center !important;
@@ -254,36 +336,9 @@
   font-size: 0.82rem !important;
 }
 
-@media (min-width: 861px) {
-  .topbar {
-    min-height: 74px !important;
-    padding: 14px 22px !important;
-  }
-
-  .topbar .brand-copy strong {
-    font-size: 1.08rem !important;
-  }
-
-  .topbar > .button {
-    display: inline-flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 64px !important;
-    height: 40px !important;
-    min-height: 40px !important;
-    padding: 0 !important;
-    border-radius: 999px !important;
-    border: 1px solid rgba(126, 101, 68, 0.105) !important;
-    background: rgba(255, 250, 244, 0.34) !important;
-    box-shadow:
-      inset 0 1px 0 rgba(255,255,255,0.62),
-      0 10px 24px rgba(31,26,20,0.055) !important;
-  }
-}
-
 @media (max-width: 860px) {
   .topbar {
-    grid-template-columns: minmax(0, 1fr) 44px 44px !important;
+    grid-template-columns: minmax(0, 1fr) 44px !important;
     align-items: center !important;
     gap: 10px !important;
     margin-bottom: 10px !important;
@@ -299,11 +354,6 @@
     flex: 1 1 auto !important;
   }
 
-  .topbar .brand-mark {
-    transform: scale(1.09) !important;
-    transform-origin: center !important;
-  }
-
   .topbar .brand-copy strong {
     font-size: clamp(1.2rem, 4.8vw, 1.55rem) !important;
   }
@@ -312,50 +362,27 @@
     display: none !important;
   }
 
-  .topbar > .button,
-  .topbar::after {
-    box-sizing: border-box !important;
-    width: 44px !important;
-    height: 44px !important;
-    min-width: 44px !important;
-    min-height: 44px !important;
-    max-width: 44px !important;
-    max-height: 44px !important;
-    border-radius: 999px !important;
-    align-self: center !important;
-    justify-self: center !important;
-    border: 1px solid rgba(126, 101, 68, 0.105) !important;
-    background-color: rgba(255, 250, 244, 0.40) !important;
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.70),
-      inset 0 -1px 0 rgba(126, 101, 68, 0.05),
-      0 10px 23px rgba(31, 26, 20, 0.048) !important;
-    backdrop-filter: blur(22px) saturate(1.03) !important;
-    -webkit-backdrop-filter: blur(22px) saturate(1.03) !important;
-  }
-
   .topbar > .button {
-    display: inline-flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 0 !important;
-    color: rgba(21, 20, 17, 0.70) !important;
-  }
-
-  .topbar > .button::before {
-    content: "" !important;
-    width: 21px !important;
-    height: 21px !important;
-    transform: none !important;
-    background: url("./assets/fidenta-account-icon.svg") center / contain no-repeat !important;
-    opacity: 0.72 !important;
+    display: none !important;
   }
 
   .topbar::after {
     content: "" !important;
     display: block !important;
-    flex: 0 0 44px !important;
+    box-sizing: border-box !important;
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    border-radius: 999px !important;
+    align-self: center !important;
+    justify-self: center !important;
+    border: 1px solid rgba(126, 101, 68, 0.105) !important;
     background: url("./assets/fidenta-menu-icon.svg") center / 21px 21px no-repeat, rgba(255, 250, 244, 0.40) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.70),
+      inset 0 -1px 0 rgba(126, 101, 68, 0.05),
+      0 10px 23px rgba(31, 26, 20, 0.048) !important;
     opacity: 1 !important;
   }
 
@@ -413,35 +440,6 @@
     display: none !important;
   }
 
-  .topbar .nav a:last-child {
-    border-bottom: 0 !important;
-  }
-
-  .hero-actions .button,
-  .section-button {
-    min-height: 52px !important;
-    box-shadow:
-      inset 0 1px 0 rgba(255,255,255,0.18),
-      0 14px 30px rgba(31,26,20,0.075) !important;
-  }
-
-  .intro {
-    padding-bottom: 22px !important;
-  }
-
-  .directions {
-    padding-top: 26px !important;
-  }
-
-  .asset-story {
-    padding-bottom: 38px !important;
-  }
-
-  .model {
-    padding-top: 30px !important;
-    padding-bottom: 34px !important;
-  }
-
   .footer.footer-finished {
     width: calc(100% - 24px) !important;
     margin: 0 auto 18px !important;
@@ -451,7 +449,6 @@
   }
 
   .footer-finished .footer-main {
-    display: grid !important;
     grid-template-columns: 1fr !important;
     gap: 0 !important;
   }
@@ -465,48 +462,15 @@
     border-bottom: 1px solid rgba(255,255,255,0.08) !important;
   }
 
-  .footer-finished .footer-brand-block {
-    padding-top: 0 !important;
-  }
-
-  .footer-finished .footer-col:last-child {
-    border-bottom: 0 !important;
-  }
-
-  .footer-finished .footer-brand-block p,
-  .footer-finished .footer-col a {
-    font-size: 0.98rem !important;
-    line-height: 1.58 !important;
-  }
-
-  .footer-finished .footer-title {
-    margin-bottom: 12px !important;
-    font-size: 0.68rem !important;
-  }
-
   .footer-finished .demo-footer-nav {
     width: 100% !important;
-    min-width: 0 !important;
     margin-top: 18px !important;
     padding: 18px 0 0 !important;
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 10px !important;
-    border-top: 1px solid rgba(255,255,255,0.08) !important;
     background: transparent !important;
     border-left: 0 !important;
     border-right: 0 !important;
     border-bottom: 0 !important;
-  }
-
-  .footer-finished .demo-footer-nav span {
-    flex: 0 0 100% !important;
-  }
-
-  .footer-finished .demo-footer-nav,
-  .footer-finished .footer-bottom {
-    justify-self: start !important;
-    text-align: left !important;
+    border-radius: 0 !important;
   }
 
   .footer-finished .footer-bottom {
@@ -519,45 +483,19 @@
 
 @media (max-width: 420px) {
   .topbar {
-    grid-template-columns: minmax(0, 1fr) 42px 42px !important;
+    grid-template-columns: minmax(0, 1fr) 42px !important;
     gap: 8px !important;
   }
 
-  .topbar .brand-mark {
-    transform: scale(1.08) !important;
-  }
-
-  .topbar > .button,
   .topbar::after {
     width: 42px !important;
     height: 42px !important;
     min-width: 42px !important;
     min-height: 42px !important;
-    max-width: 42px !important;
-    max-height: 42px !important;
-  }
-
-  .topbar > .button::before {
-    width: 20px !important;
-    height: 20px !important;
-  }
-
-  .topbar::after {
-    flex-basis: 42px !important;
     background-size: 20px 20px, auto !important;
   }
 
   .topbar.is-menu-open::after {
     line-height: 40px !important;
-  }
-
-  .topbar .nav {
-    left: 6px !important;
-    right: 6px !important;
-    top: calc(100% + 18px) !important;
-  }
-
-  .topbar .nav a {
-    font-size: 15px !important;
   }
 }
