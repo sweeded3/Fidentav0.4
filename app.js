@@ -107,37 +107,7 @@ document.querySelectorAll('.topbar > .button[href$="account.html"]').forEach((bu
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const hasDesktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-const mobileNavQuery = window.matchMedia("(max-width: 860px)");
-
 const topbar = document.querySelector(".topbar");
-if (topbar) {
-  topbar.addEventListener("click", (event) => {
-    if (!mobileNavQuery.matches) {
-      return;
-    }
-
-    const rect = topbar.getBoundingClientRect();
-    const burgerHitArea = 56;
-    const clickedBurger = event.clientX >= rect.right - burgerHitArea;
-
-    if (clickedBurger) {
-      event.preventDefault();
-      topbar.classList.toggle("is-menu-open");
-    }
-  });
-
-  topbar.querySelectorAll(".nav a").forEach((link) => {
-    link.addEventListener("click", () => topbar.classList.remove("is-menu-open"));
-  });
-
-  document.addEventListener("click", (event) => {
-    if (!mobileNavQuery.matches || topbar.contains(event.target)) {
-      return;
-    }
-
-    topbar.classList.remove("is-menu-open");
-  });
-}
 
 const revealItems = document.querySelectorAll(".reveal");
 
