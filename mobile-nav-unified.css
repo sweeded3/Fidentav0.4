@@ -2,6 +2,14 @@
   display: none !important;
 }
 
+@media (min-width: 861px) {
+  body .site-shell .topbar,
+  body .site-shell-light .topbar {
+    position: absolute !important;
+    top: 20px !important;
+  }
+}
+
 @media (max-width: 860px) {
   body .site-shell .topbar,
   body .site-shell-light .topbar {
