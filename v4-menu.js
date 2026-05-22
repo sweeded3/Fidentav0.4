@@ -8,6 +8,14 @@
     topbars.forEach((bar) => bar.classList.remove('is-menu-open'));
   };
 
+  document.querySelectorAll('.brand-mark').forEach((mark) => {
+    mark.addEventListener('click', (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      mark.classList.toggle('is-moon');
+    });
+  });
+
   topbars.forEach((topbar) => {
     const nav = topbar.querySelector('.nav');
     if (!nav) return;
