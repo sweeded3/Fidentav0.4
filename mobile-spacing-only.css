@@ -23,6 +23,36 @@
     margin-top: 8px !important;
   }
 
+  .objects-hero {
+    min-height: auto !important;
+    padding-top: 48px !important;
+    padding-bottom: 52px !important;
+  }
+
+  .objects-hero-inner {
+    min-height: auto !important;
+    align-content: start !important;
+    gap: 22px !important;
+  }
+
+  .objects-copy h1 {
+    font-size: clamp(2.35rem, 11vw, 3.4rem) !important;
+  }
+
+  .objects-copy .hero-text {
+    margin-top: 18px !important;
+  }
+
+  .objects-fact-strip {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-top: 24px !important;
+  }
+
+  .objects-fact-strip article {
+    padding: 18px 20px !important;
+  }
+
   .section {
     padding-top: 56px !important;
     padding-bottom: 56px !important;
