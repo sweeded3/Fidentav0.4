@@ -377,19 +377,51 @@
   }
 
   .footer.footer-finished {
-    padding: 28px 22px !important;
-    grid-template-columns: 1fr !important;
-    gap: 26px !important;
+    width: calc(100% - 24px) !important;
+    margin: 0 auto 18px !important;
+    padding: 32px 22px !important;
+    display: block !important;
+    border-radius: 28px !important;
   }
 
   .footer-finished .footer-main {
+    display: grid !important;
     grid-template-columns: 1fr !important;
+    gap: 0 !important;
+  }
+
+  .footer-finished .footer-brand-block,
+  .footer-finished .footer-col {
+    padding: 18px 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+  }
+
+  .footer-finished .footer-brand-block {
+    padding-top: 0 !important;
+  }
+
+  .footer-finished .footer-col:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .footer-finished .footer-brand-block p,
+  .footer-finished .footer-col a {
+    font-size: 0.98rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .footer-finished .footer-title {
+    margin-bottom: 12px !important;
+    font-size: 0.68rem !important;
   }
 
   .footer-finished .demo-footer-nav,
   .footer-finished .footer-credit {
     justify-self: start !important;
-    padding-top: 0 !important;
+    padding-top: 18px !important;
     text-align: left !important;
   }
 }
