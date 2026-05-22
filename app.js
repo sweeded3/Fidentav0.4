@@ -15,6 +15,35 @@ navigationLogoStyle.textContent = `
     box-shadow: none !important;
   }
 
+  @media (min-width: 861px) {
+    .topbar::after {
+      display: none !important;
+      content: none !important;
+    }
+
+    .topbar > .button {
+      width: auto !important;
+      min-width: 168px !important;
+      height: 44px !important;
+      min-height: 44px !important;
+      padding: 0 24px !important;
+      border-radius: 999px !important;
+      font-size: 0.94rem !important;
+      font-weight: 600 !important;
+      color: rgba(21,20,17,.84) !important;
+      border: 1px solid rgba(126,101,68,.14) !important;
+      background: linear-gradient(135deg, rgba(255,250,244,.62), rgba(234,224,210,.46)) !important;
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.72),
+        0 12px 24px rgba(31,26,20,.06) !important;
+    }
+
+    .topbar > .button::before {
+      display: none !important;
+      content: none !important;
+    }
+  }
+
   @media (max-width: 860px) {
     .topbar .brand-mark {
       width: 58px !important;
@@ -38,6 +67,10 @@ navigationLogoStyle.textContent = `
   }
 `;
 document.head.appendChild(navigationLogoStyle);
+
+document.querySelectorAll('.topbar > .button[href$="account.html"]').forEach((button) => {
+  button.textContent = 'Личный кабинет';
+});
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const hasDesktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
