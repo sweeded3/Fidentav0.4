@@ -1,0 +1,40 @@
+.topbar .brand-cluster {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 16px !important;
+  min-width: 0 !important;
+}
+
+.topbar .brand-cluster > .brand-mark {
+  border: 0 !important;
+  appearance: none !important;
+  -webkit-appearance: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.topbar .brand-text-link {
+  gap: 0 !important;
+}
+
+@media (max-width: 860px) {
+  body .site-shell .topbar .brand-cluster,
+  body .site-shell-light .topbar .brand-cluster,
+  .dashboard-shell .topbar .brand-cluster {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-width: 0 !important;
+    gap: 14px !important;
+  }
+
+  body .site-shell .topbar .brand-text-link,
+  body .site-shell-light .topbar .brand-text-link,
+  .dashboard-shell .topbar .brand-text-link {
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    -webkit-tap-highlight-color: transparent !important;
+    tap-highlight-color: transparent !important;
+  }
+}
