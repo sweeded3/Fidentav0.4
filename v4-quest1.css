@@ -2,6 +2,24 @@
 
 /* V4 Quest 1-2: header CTA, premium mobile menu, brand typography */
 
+.topbar {
+  background: linear-gradient(135deg, rgba(252, 247, 239, 0.84), rgba(226, 215, 199, 0.66)) !important;
+  border-color: rgba(255, 255, 255, 0.56) !important;
+  box-shadow:
+    0 20px 56px rgba(31, 26, 20, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.58) !important;
+  backdrop-filter: blur(22px) saturate(1.04) !important;
+  -webkit-backdrop-filter: blur(22px) saturate(1.04) !important;
+}
+
+.topbar.is-condensed {
+  background: linear-gradient(135deg, rgba(252, 247, 239, 0.90), rgba(226, 215, 199, 0.72)) !important;
+}
+
+.topbar .brand-copy {
+  color: rgba(21, 20, 17, 0.91) !important;
+}
+
 .topbar .brand-copy strong {
   font-family: "Tenor Sans", "Manrope", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
   font-weight: 500 !important;
@@ -9,6 +27,25 @@
   line-height: 0.98 !important;
   color: rgba(21, 20, 17, 0.91) !important;
   text-shadow: 0 1px 0 rgba(255,255,255,0.30), 0 10px 22px rgba(17,20,24,0.045) !important;
+}
+
+.topbar .brand-copy span {
+  color: rgba(21, 20, 17, 0.58) !important;
+}
+
+.topbar .brand-mark {
+  transform: scale(1.12) !important;
+  transform-origin: center !important;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.12) !important;
+}
+
+.topbar .nav {
+  color: rgba(21, 20, 17, 0.72) !important;
+  font-weight: 560 !important;
+}
+
+.topbar .nav a::after {
+  background: rgba(21, 20, 17, 0.42) !important;
 }
 
 .topbar > .button {
@@ -99,6 +136,92 @@
 
 .model .eyebrow {
   margin-bottom: 14px !important;
+}
+
+.footer.footer-finished {
+  width: var(--content) !important;
+  max-width: 1320px !important;
+  margin: 0 auto 60px !important;
+  padding: 54px 56px !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 48px !important;
+  align-items: start !important;
+  overflow: hidden !important;
+  border-radius: 34px !important;
+  background: #111418 !important;
+  color: rgba(248,244,238,0.78) !important;
+  box-shadow: 0 30px 70px rgba(17,20,24,0.18) !important;
+}
+
+.footer-finished .footer-main {
+  display: grid !important;
+  grid-template-columns: minmax(180px, 1.1fr) minmax(120px, .7fr) minmax(150px, .8fr) minmax(220px, 1fr) !important;
+  gap: 18px !important;
+  min-width: 0 !important;
+}
+
+.footer-finished .footer-brand-block,
+.footer-finished .footer-col {
+  min-width: 0 !important;
+  padding: 24px !important;
+  border-radius: 24px !important;
+  background: rgba(255,255,255,0.035) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.footer-finished .footer-brand-block p,
+.footer-finished .footer-col a {
+  font-size: 0.94rem !important;
+  line-height: 1.65 !important;
+}
+
+.footer-finished .footer-title {
+  margin-top: 0 !important;
+  color: rgba(248,244,238,0.42) !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+}
+
+.footer-finished .demo-footer-nav {
+  justify-self: end !important;
+  min-width: 110px !important;
+  padding-top: 128px !important;
+}
+
+.footer-finished .footer-credit {
+  justify-self: end !important;
+  align-self: end !important;
+  max-width: 180px !important;
+  text-align: right !important;
+  color: rgba(248,244,238,0.46) !important;
+}
+
+@media (min-width: 861px) {
+  .topbar {
+    min-height: 74px !important;
+    padding: 14px 22px !important;
+  }
+
+  .topbar .brand-copy strong {
+    font-size: 1.08rem !important;
+  }
+
+  .topbar > .button {
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 64px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    padding: 0 !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(126, 101, 68, 0.105) !important;
+    background: rgba(255, 250, 244, 0.34) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.62),
+      0 10px 24px rgba(31,26,20,0.055) !important;
+  }
 }
 
 @media (max-width: 860px) {
@@ -251,6 +374,23 @@
 
   .model {
     padding-top: 30px !important;
+  }
+
+  .footer.footer-finished {
+    padding: 28px 22px !important;
+    grid-template-columns: 1fr !important;
+    gap: 26px !important;
+  }
+
+  .footer-finished .footer-main {
+    grid-template-columns: 1fr !important;
+  }
+
+  .footer-finished .demo-footer-nav,
+  .footer-finished .footer-credit {
+    justify-self: start !important;
+    padding-top: 0 !important;
+    text-align: left !important;
   }
 }
 
