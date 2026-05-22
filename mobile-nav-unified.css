@@ -3,13 +3,16 @@
 }
 
 @media (max-width: 860px) {
-  .topbar {
+  body .site-shell .topbar,
+  body .site-shell-light .topbar {
     grid-template-columns: minmax(0, 1fr) 44px 44px !important;
     gap: 10px !important;
   }
 
-  .topbar > .button,
-  .topbar > .mobile-cabinet-link {
+  body .site-shell .topbar > .button,
+  body .site-shell-light .topbar > .button,
+  body .site-shell .topbar > .mobile-cabinet-link,
+  body .site-shell-light .topbar > .mobile-cabinet-link {
     display: block !important;
     grid-column: 2 !important;
     grid-row: 1 !important;
@@ -34,15 +37,20 @@
       0 10px 23px rgba(31, 26, 20, 0.048) !important;
   }
 
-  .topbar > .button::before,
-  .topbar > .button::after,
-  .topbar > .mobile-cabinet-link::before,
-  .topbar > .mobile-cabinet-link::after {
+  body .site-shell .topbar > .button::before,
+  body .site-shell .topbar > .button::after,
+  body .site-shell-light .topbar > .button::before,
+  body .site-shell-light .topbar > .button::after,
+  body .site-shell .topbar > .mobile-cabinet-link::before,
+  body .site-shell .topbar > .mobile-cabinet-link::after,
+  body .site-shell-light .topbar > .mobile-cabinet-link::before,
+  body .site-shell-light .topbar > .mobile-cabinet-link::after {
     display: none !important;
     content: none !important;
   }
 
-  .topbar::after {
+  body .site-shell .topbar::after,
+  body .site-shell-light .topbar::after {
     grid-column: 3 !important;
     grid-row: 1 !important;
     width: 44px !important;
@@ -54,13 +62,16 @@
 }
 
 @media (max-width: 420px) {
-  .topbar {
+  body .site-shell .topbar,
+  body .site-shell-light .topbar {
     grid-template-columns: minmax(0, 1fr) 42px 42px !important;
     gap: 8px !important;
   }
 
-  .topbar > .button,
-  .topbar > .mobile-cabinet-link {
+  body .site-shell .topbar > .button,
+  body .site-shell-light .topbar > .button,
+  body .site-shell .topbar > .mobile-cabinet-link,
+  body .site-shell-light .topbar > .mobile-cabinet-link {
     width: 42px !important;
     height: 42px !important;
     min-width: 42px !important;
@@ -70,7 +81,8 @@
     background-size: 21px 21px, auto !important;
   }
 
-  .topbar::after {
+  body .site-shell .topbar::after,
+  body .site-shell-light .topbar::after {
     width: 42px !important;
     height: 42px !important;
     min-width: 42px !important;
