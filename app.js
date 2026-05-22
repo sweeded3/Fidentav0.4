@@ -7,12 +7,21 @@ navigationLogoStyle.textContent = `
   .topbar .brand-mark,
   .topbar.brand-dark .brand-mark,
   .brand-dark .brand-mark {
-    width: 58px !important;
-    height: 58px !important;
-    min-width: 58px !important;
-    min-height: 58px !important;
+    display: block !important;
+    width: 46px !important;
+    height: 46px !important;
+    min-width: 46px !important;
+    min-height: 46px !important;
+    max-width: 46px !important;
+    max-height: 46px !important;
+    flex: 0 0 46px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    border: 0 !important;
+    outline: 0 !important;
     transform: none !important;
     box-shadow: none !important;
+    background: linear-gradient(135deg, var(--gold), #f0dcc4) !important;
   }
 
   @media (min-width: 861px) {
@@ -41,28 +50,6 @@ navigationLogoStyle.textContent = `
     .topbar > .button::before {
       display: none !important;
       content: none !important;
-    }
-  }
-
-  @media (max-width: 860px) {
-    .topbar .brand-mark {
-      width: 58px !important;
-      height: 58px !important;
-      min-width: 58px !important;
-      min-height: 58px !important;
-      transform: none !important;
-      box-shadow: none !important;
-    }
-  }
-
-  @media (max-width: 420px) {
-    .topbar .brand-mark {
-      width: 56px !important;
-      height: 56px !important;
-      min-width: 56px !important;
-      min-height: 56px !important;
-      transform: none !important;
-      box-shadow: none !important;
     }
   }
 `;
