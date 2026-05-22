@@ -48,6 +48,17 @@
     justify-content: flex-start !important;
     min-width: 0 !important;
     gap: 14px !important;
+    -webkit-tap-highlight-color: transparent !important;
+    tap-highlight-color: transparent !important;
+    user-select: none !important;
+  }
+
+  body .site-shell .topbar .brand:focus,
+  body .site-shell-light .topbar .brand:focus,
+  body .site-shell .topbar .brand:active,
+  body .site-shell-light .topbar .brand:active {
+    outline: none !important;
+    background: transparent !important;
   }
 
   body .site-shell .topbar .brand-mark,
@@ -61,6 +72,8 @@
     flex: 0 0 46px !important;
     cursor: pointer !important;
     transition: background 180ms ease !important;
+    -webkit-tap-highlight-color: transparent !important;
+    tap-highlight-color: transparent !important;
   }
 
   body .site-shell .topbar .brand-mark.is-moon,
