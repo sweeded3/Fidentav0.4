@@ -14,6 +14,7 @@
   body .site-shell .topbar > .mobile-cabinet-link,
   body .site-shell-light .topbar > .mobile-cabinet-link {
     display: block !important;
+    position: relative !important;
     grid-column: 2 !important;
     grid-row: 1 !important;
     width: 44px !important;
@@ -30,20 +31,33 @@
     white-space: nowrap !important;
     color: transparent !important;
     border: 1px solid rgba(126, 101, 68, 0.105) !important;
-    background: url("./assets/fidenta-briefcase-icon.svg") calc(50% + 2px) center / 22px 22px no-repeat, rgba(255, 250, 244, 0.40) !important;
+    background: linear-gradient(135deg, rgba(255, 250, 244, 0.43), rgba(238, 229, 216, 0.34)) !important;
     box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.70),
-      inset 0 -1px 0 rgba(126, 101, 68, 0.05),
-      0 10px 23px rgba(31, 26, 20, 0.048) !important;
+      inset 0 1px 0 rgba(255, 255, 255, 0.64),
+      inset 0 -1px 0 rgba(126, 101, 68, 0.045),
+      0 10px 23px rgba(31, 26, 20, 0.045) !important;
   }
 
   body .site-shell .topbar > .button::before,
-  body .site-shell .topbar > .button::after,
   body .site-shell-light .topbar > .button::before,
-  body .site-shell-light .topbar > .button::after,
   body .site-shell .topbar > .mobile-cabinet-link::before,
+  body .site-shell-light .topbar > .mobile-cabinet-link::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute !important;
+    left: calc(50% + 2px) !important;
+    top: 50% !important;
+    width: 22px !important;
+    height: 22px !important;
+    transform: translate(-50%, -50%) !important;
+    background-color: rgba(21, 20, 17, 0.70) !important;
+    -webkit-mask: url("./assets/fidenta-briefcase-icon.svg") center / contain no-repeat !important;
+    mask: url("./assets/fidenta-briefcase-icon.svg") center / contain no-repeat !important;
+  }
+
+  body .site-shell .topbar > .button::after,
+  body .site-shell-light .topbar > .button::after,
   body .site-shell .topbar > .mobile-cabinet-link::after,
-  body .site-shell-light .topbar > .mobile-cabinet-link::before,
   body .site-shell-light .topbar > .mobile-cabinet-link::after {
     display: none !important;
     content: none !important;
@@ -58,6 +72,12 @@
     min-width: 44px !important;
     min-height: 44px !important;
     justify-self: center !important;
+    color: transparent !important;
+    background-color: rgba(21, 20, 17, 0.70) !important;
+    background-image: none !important;
+    -webkit-mask: url("./assets/fidenta-menu-icon.svg") center / 21px 21px no-repeat, linear-gradient(#000 0 0) !important;
+    -webkit-mask-composite: source-over !important;
+    mask: url("./assets/fidenta-menu-icon.svg") center / 21px 21px no-repeat, linear-gradient(#000 0 0) !important;
   }
 }
 
@@ -78,7 +98,14 @@
     min-height: 42px !important;
     max-width: 42px !important;
     max-height: 42px !important;
-    background-size: 21px 21px, auto !important;
+  }
+
+  body .site-shell .topbar > .button::before,
+  body .site-shell-light .topbar > .button::before,
+  body .site-shell .topbar > .mobile-cabinet-link::before,
+  body .site-shell-light .topbar > .mobile-cabinet-link::before {
+    width: 21px !important;
+    height: 21px !important;
   }
 
   body .site-shell .topbar::after,
@@ -87,5 +114,7 @@
     height: 42px !important;
     min-width: 42px !important;
     min-height: 42px !important;
+    -webkit-mask-size: 20px 20px, auto !important;
+    mask-size: 20px 20px, auto !important;
   }
 }
