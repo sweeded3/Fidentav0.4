@@ -37,6 +37,54 @@
   line-height: 1;
 }
 
+.hero-actions .button,
+.section-button {
+  position: relative !important;
+  overflow: hidden !important;
+  isolation: isolate !important;
+  border-width: 1px !important;
+  backdrop-filter: blur(18px) saturate(1.04) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(1.04) !important;
+}
+
+.hero-actions .button::after,
+.section-button::after {
+  content: "" !important;
+  position: absolute !important;
+  inset: 1px 1px auto 1px !important;
+  height: 48% !important;
+  border-radius: inherit !important;
+  background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(255,255,255,0)) !important;
+  opacity: 0.72 !important;
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+
+.hero-actions .button:not(.button-secondary) {
+  background: linear-gradient(180deg, rgba(31, 103, 85, 0.96), rgba(24, 86, 71, 0.98)) !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    inset 0 -1px 0 rgba(0,0,0,0.14),
+    0 18px 38px rgba(14, 56, 47, 0.22) !important;
+}
+
+.hero-actions .button-secondary,
+.section-button.button-secondary {
+  background: linear-gradient(135deg, rgba(255,250,244,0.76), rgba(238,229,216,0.58)) !important;
+  color: rgba(17, 20, 24, 0.88) !important;
+  border-color: rgba(126, 101, 68, 0.14) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.72),
+    inset 0 -1px 0 rgba(126,101,68,0.08),
+    0 14px 34px rgba(31,26,20,0.07) !important;
+}
+
+.hero-actions .button-secondary:hover,
+.section-button.button-secondary:hover {
+  background: linear-gradient(135deg, rgba(255,250,244,0.88), rgba(240,232,221,0.72)) !important;
+}
+
 @media (max-width: 860px) {
   .topbar {
     grid-template-columns: minmax(0, 1fr) 44px 44px !important;
@@ -171,6 +219,14 @@
 
   .topbar .nav a:last-child {
     border-bottom: 0 !important;
+  }
+
+  .hero-actions .button,
+  .section-button {
+    min-height: 52px !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.18),
+      0 14px 30px rgba(31,26,20,0.075) !important;
   }
 }
 
