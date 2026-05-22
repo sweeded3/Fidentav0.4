@@ -8,8 +8,10 @@
     topbars.forEach((bar) => bar.classList.remove('is-menu-open'));
   };
 
-  document.querySelectorAll('.brand-mark').forEach((mark) => {
+  document.querySelectorAll('.topbar .brand-mark').forEach((mark) => {
     mark.addEventListener('click', (event) => {
+      if (!isMobile()) return;
+
       event.preventDefault();
       event.stopPropagation();
       mark.classList.toggle('is-moon');
