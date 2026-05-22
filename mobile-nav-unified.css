@@ -159,6 +159,11 @@
     top: calc(100% + 12px) !important;
   }
 
+  body .site-shell .topbar .nav a[href*="account"],
+  body .site-shell-light .topbar .nav a[href*="account"] {
+    display: none !important;
+  }
+
   .hero .hero-actions,
   .page-hero .hero-actions {
     width: min(100%, 340px) !important;
