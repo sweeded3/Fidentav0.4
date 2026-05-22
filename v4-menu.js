@@ -69,4 +69,33 @@
     if (metricTitles[1]) metricTitles[1].textContent = 'Контроль';
     if (metricTexts[1]) metricTexts[1].textContent = 'управление объектом, обращениями, подрядчиками и отчетностью';
   }
+
+  const headerSunStyle = document.createElement('style');
+  headerSunStyle.textContent = `
+    @media (min-width: 861px) {
+      .topbar .brand {
+        gap: 14px !important;
+      }
+
+      .topbar .brand-mark {
+        width: 26px !important;
+        height: 26px !important;
+        min-width: 26px !important;
+        border-radius: 999px !important;
+        background:
+          radial-gradient(circle at 34% 30%, rgba(255, 238, 202, 0.98) 0%, rgba(224, 175, 111, 0.94) 43%, rgba(182, 129, 67, 0.88) 100%) !important;
+        box-shadow:
+          0 0 0 8px rgba(255, 250, 244, 0.18),
+          0 10px 24px rgba(138, 91, 42, 0.16),
+          inset 0 1px 0 rgba(255, 255, 255, 0.46) !important;
+        transform: none !important;
+        opacity: 1 !important;
+      }
+
+      .topbar .brand-mark::after {
+        background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0)) !important;
+      }
+    }
+  `;
+  document.head.appendChild(headerSunStyle);
 })();
