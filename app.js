@@ -1,13 +1,40 @@
 const navigationLogoStyle = document.createElement("style");
 navigationLogoStyle.textContent = `
-  .brand-mark {
-    width: 28px;
-    height: 28px;
-    box-shadow: none;
+  .topbar .brand {
+    gap: 18px !important;
   }
 
+  .topbar .brand-mark,
+  .topbar.brand-dark .brand-mark,
   .brand-dark .brand-mark {
-    box-shadow: none;
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    min-height: 58px !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  @media (max-width: 860px) {
+    .topbar .brand-mark {
+      width: 58px !important;
+      height: 58px !important;
+      min-width: 58px !important;
+      min-height: 58px !important;
+      transform: none !important;
+      box-shadow: none !important;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .topbar .brand-mark {
+      width: 56px !important;
+      height: 56px !important;
+      min-width: 56px !important;
+      min-height: 56px !important;
+      transform: none !important;
+      box-shadow: none !important;
+    }
   }
 `;
 document.head.appendChild(navigationLogoStyle);
