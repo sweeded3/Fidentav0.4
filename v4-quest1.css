@@ -200,6 +200,102 @@
   .direction-panel {
     padding: 28px 28px 30px !important;
   }
+
+  .objects-hero {
+    min-height: 82svh !important;
+    padding-top: 104px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .objects-hero-inner {
+    min-height: calc(82svh - 138px) !important;
+    align-content: center !important;
+    gap: 28px !important;
+  }
+
+  .objects-hero-row {
+    display: grid !important;
+    grid-template-columns: minmax(0, .86fr) minmax(260px, .34fr) !important;
+    gap: 36px !important;
+    align-items: end !important;
+  }
+
+  .objects-copy h1 {
+    max-width: 9.8ch !important;
+  }
+
+  .objects-copy .hero-text {
+    max-width: 540px !important;
+    margin-top: 22px !important;
+  }
+
+  .objects-portfolio-badge {
+    justify-self: end !important;
+    width: min(100%, 330px) !important;
+    padding: 24px 24px 22px !important;
+    border-radius: 28px !important;
+    background: linear-gradient(180deg, rgba(248,244,238,.13), rgba(248,244,238,.055)) !important;
+    border: 1px solid rgba(248,244,238,.18) !important;
+    box-shadow: 0 26px 70px rgba(7,10,12,.16) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+    color: rgba(250,247,242,.78) !important;
+  }
+
+  .objects-portfolio-badge p {
+    margin: 0 0 18px !important;
+    color: rgba(250,247,242,.64) !important;
+    font-size: .78rem !important;
+    letter-spacing: .15em !important;
+    text-transform: uppercase !important;
+  }
+
+  .objects-portfolio-badge div {
+    padding-top: 14px !important;
+    margin-top: 14px !important;
+    border-top: 1px solid rgba(248,244,238,.14) !important;
+  }
+
+  .objects-portfolio-badge span {
+    display: block !important;
+    color: #faf7f2 !important;
+    font-weight: 700 !important;
+    font-size: 1.22rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .objects-portfolio-badge small {
+    color: rgba(250,247,242,.66) !important;
+    line-height: 1.45 !important;
+  }
+
+  .objects-portfolio-badge ul {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin: 18px 0 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .objects-portfolio-badge li {
+    padding: 6px 10px !important;
+    border-radius: 999px !important;
+    background: rgba(255,255,255,.08) !important;
+    border: 1px solid rgba(255,255,255,.09) !important;
+    color: rgba(250,247,242,.72) !important;
+    font-size: .76rem !important;
+  }
+
+  .objects-fact-strip {
+    margin-top: 6px !important;
+    gap: 12px !important;
+  }
+
+  .objects-fact-strip article {
+    padding: 18px 20px !important;
+    border-radius: 22px !important;
+  }
 }
 
 /* Footer */
@@ -399,6 +495,10 @@
   }
 
   .topbar .nav a::after { display: none !important; }
+
+  .objects-portfolio-badge {
+    display: none !important;
+  }
 
   .footer.footer-finished {
     width: calc(100% - 24px) !important;
