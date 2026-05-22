@@ -28,28 +28,50 @@ navigationLogoStyle.textContent = `
     .topbar::after {
       display: none !important;
       content: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      min-width: 0 !important;
+      flex-basis: 0 !important;
+      border: 0 !important;
+      box-shadow: none !important;
+      background: none !important;
     }
 
     .topbar > .button {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex: 0 0 auto !important;
       width: auto !important;
-      min-width: 168px !important;
+      min-width: 158px !important;
+      max-width: none !important;
       height: 44px !important;
       min-height: 44px !important;
+      max-height: 44px !important;
       padding: 0 24px !important;
+      margin-left: 18px !important;
       border-radius: 999px !important;
       font-size: 0.94rem !important;
+      line-height: 1 !important;
       font-weight: 600 !important;
+      letter-spacing: -0.01em !important;
       color: rgba(21,20,17,.84) !important;
       border: 1px solid rgba(126,101,68,.14) !important;
-      background: linear-gradient(135deg, rgba(255,250,244,.62), rgba(234,224,210,.46)) !important;
+      background: linear-gradient(135deg, rgba(255,250,244,.64), rgba(234,224,210,.46)) !important;
       box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.72),
+        inset 0 1px 0 rgba(255,255,255,.74),
+        inset 0 -1px 0 rgba(126,101,68,.06),
         0 12px 24px rgba(31,26,20,.06) !important;
+      backdrop-filter: blur(18px) saturate(1.04) !important;
+      -webkit-backdrop-filter: blur(18px) saturate(1.04) !important;
     }
 
     .topbar > .button::before {
       display: none !important;
       content: none !important;
+      width: 0 !important;
+      height: 0 !important;
+      background: none !important;
     }
   }
 `;
@@ -61,6 +83,37 @@ document.querySelectorAll('.topbar > .button[href$="account.html"]').forEach((bu
 
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const hasDesktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+const mobileNavQuery = window.matchMedia("(max-width: 860px)");
+
+const topbar = document.querySelector(".topbar");
+if (topbar) {
+  topbar.addEventListener("click", (event) => {
+    if (!mobileNavQuery.matches) {
+      return;
+    }
+
+    const rect = topbar.getBoundingClientRect();
+    const burgerHitArea = 56;
+    const clickedBurger = event.clientX >= rect.right - burgerHitArea;
+
+    if (clickedBurger) {
+      event.preventDefault();
+      topbar.classList.toggle("is-menu-open");
+    }
+  });
+
+  topbar.querySelectorAll(".nav a").forEach((link) => {
+    link.addEventListener("click", () => topbar.classList.remove("is-menu-open"));
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!mobileNavQuery.matches || topbar.contains(event.target)) {
+      return;
+    }
+
+    topbar.classList.remove("is-menu-open");
+  });
+}
 
 const revealItems = document.querySelectorAll(".reveal");
 
@@ -89,7 +142,6 @@ if (!prefersReducedMotion.matches) {
   }
 }
 
-const topbar = document.querySelector(".topbar");
 const parallaxItems = document.querySelectorAll(
   ".hero-media img, .page-hero-media img, .objects-hero-media img, .detail-hero-media img, .dashboard-hero-backdrop img",
 );
