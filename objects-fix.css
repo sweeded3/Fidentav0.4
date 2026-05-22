@@ -1,6 +1,7 @@
 @media (min-width: 861px) {
   .portfolio-grid {
     padding-top: 72px !important;
+    padding-bottom: 54px !important;
   }
 
   .portfolio-grid .section-heading {
@@ -50,6 +51,24 @@
   .property-card-featured .property-image {
     min-height: 0 !important;
     aspect-ratio: 1.45 !important;
+  }
+
+  .showcase-band {
+    padding-top: 26px !important;
+    padding-bottom: 34px !important;
+  }
+
+  .showcase-band .showcase-panel {
+    padding: 38px 44px !important;
+  }
+
+  .contact-band {
+    padding-top: 28px !important;
+    padding-bottom: 74px !important;
+  }
+
+  .contact-band .callout-wrap {
+    margin-top: 0 !important;
   }
 }
 
