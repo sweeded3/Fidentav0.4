@@ -73,6 +73,30 @@ navigationLogoStyle.textContent = `
       height: 0 !important;
       background: none !important;
     }
+
+    .hero {
+      min-height: 88svh !important;
+      padding-top: 104px !important;
+      padding-bottom: 34px !important;
+    }
+
+    .hero-inner {
+      min-height: calc(88svh - 138px) !important;
+      align-content: center !important;
+      gap: 22px !important;
+    }
+
+    .hero-stage {
+      align-items: center !important;
+    }
+
+    .hero-text {
+      margin-top: 18px !important;
+    }
+
+    .hero-actions {
+      margin-top: 24px !important;
+    }
   }
 `;
 document.head.appendChild(navigationLogoStyle);
