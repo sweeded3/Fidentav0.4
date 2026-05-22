@@ -74,26 +74,25 @@
   headerSunStyle.textContent = `
     @media (min-width: 861px) {
       .topbar .brand {
-        gap: 14px !important;
+        gap: 16px !important;
       }
 
       .topbar .brand-mark {
-        width: 26px !important;
-        height: 26px !important;
-        min-width: 26px !important;
+        width: 42px !important;
+        height: 42px !important;
+        min-width: 42px !important;
         border-radius: 999px !important;
-        background:
-          radial-gradient(circle at 34% 30%, rgba(255, 238, 202, 0.98) 0%, rgba(224, 175, 111, 0.94) 43%, rgba(182, 129, 67, 0.88) 100%) !important;
+        background: linear-gradient(135deg, var(--gold), #f0dcc4) !important;
         box-shadow:
-          0 0 0 8px rgba(255, 250, 244, 0.18),
-          0 10px 24px rgba(138, 91, 42, 0.16),
-          inset 0 1px 0 rgba(255, 255, 255, 0.46) !important;
+          0 0 0 7px rgba(255, 255, 255, 0.16),
+          0 12px 26px rgba(138, 91, 42, 0.16),
+          inset 0 1px 0 rgba(255, 255, 255, 0.38) !important;
         transform: none !important;
         opacity: 1 !important;
       }
 
       .topbar .brand-mark::after {
-        background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0)) !important;
+        background: linear-gradient(135deg, rgba(255,255,255,0.24), rgba(255,255,255,0)) !important;
       }
     }
 
