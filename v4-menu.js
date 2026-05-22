@@ -3,19 +3,27 @@
   if (!topbars.length) return;
 
   const isMobile = () => window.innerWidth <= 860;
+  let lastMoonToggle = 0;
 
   const closeAll = () => {
     topbars.forEach((bar) => bar.classList.remove('is-menu-open'));
   };
 
-  document.querySelectorAll('.topbar .brand-mark').forEach((mark) => {
-    mark.addEventListener('click', (event) => {
-      if (!isMobile()) return;
+  const toggleMoon = (mark, event) => {
+    if (!isMobile()) return;
 
-      event.preventDefault();
-      event.stopPropagation();
-      mark.classList.toggle('is-moon');
-    });
+    const now = Date.now();
+    if (now - lastMoonToggle < 260) return;
+    lastMoonToggle = now;
+
+    event.preventDefault();
+    event.stopPropagation();
+    mark.classList.toggle('is-moon');
+  };
+
+  document.querySelectorAll('.topbar .brand-mark').forEach((mark) => {
+    mark.addEventListener('pointerdown', (event) => toggleMoon(mark, event));
+    mark.addEventListener('click', (event) => toggleMoon(mark, event));
   });
 
   topbars.forEach((topbar) => {
