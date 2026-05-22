@@ -96,6 +96,46 @@
         background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0)) !important;
       }
     }
+
+    .topbar > .button::before {
+      background: url("./assets/lucide-briefcase-business.svg") center / contain no-repeat !important;
+      opacity: 0.74 !important;
+      filter: drop-shadow(0 1px 0 rgba(255,255,255,0.26)) !important;
+    }
+
+    .topbar::after {
+      background-image: url("./assets/lucide-align-left.svg") !important;
+      background-position: center !important;
+      background-repeat: no-repeat !important;
+      background-size: 22px 22px !important;
+      opacity: 0.78 !important;
+    }
+
+    @media (min-width: 861px) {
+      .topbar::after {
+        content: "" !important;
+        width: 40px !important;
+        height: 40px !important;
+        min-width: 40px !important;
+        border-radius: 999px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        background: url("./assets/lucide-align-left.svg") center / 22px 22px no-repeat, rgba(255, 250, 244, 0.32) !important;
+        border: 1px solid rgba(126, 101, 68, 0.105) !important;
+        box-shadow:
+          inset 0 1px 0 rgba(255,255,255,0.58),
+          0 10px 24px rgba(31,26,20,0.045) !important;
+        backdrop-filter: blur(18px) saturate(1.02) !important;
+        -webkit-backdrop-filter: blur(18px) saturate(1.02) !important;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .topbar::after {
+        background: url("./assets/lucide-align-left.svg") center / 22px 22px no-repeat, rgba(255, 250, 244, 0.40) !important;
+      }
+    }
   `;
   document.head.appendChild(headerSunStyle);
 })();
