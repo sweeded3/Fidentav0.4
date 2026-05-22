@@ -11,6 +11,11 @@
 }
 
 @media (max-width: 860px) {
+  body .site-shell,
+  body .site-shell-light {
+    padding-top: 10px !important;
+  }
+
   body .site-shell .topbar,
   body .site-shell-light .topbar {
     position: relative !important;
@@ -22,7 +27,7 @@
     max-width: none !important;
     min-height: 70px !important;
     height: auto !important;
-    margin: 14px auto 0 !important;
+    margin: 14px auto 18px !important;
     padding: 12px 14px !important;
     display: grid !important;
     grid-template-columns: minmax(0, 1fr) 44px 44px !important;
@@ -180,10 +185,16 @@
 }
 
 @media (max-width: 420px) {
+  body .site-shell,
+  body .site-shell-light {
+    padding-top: 8px !important;
+  }
+
   body .site-shell .topbar,
   body .site-shell-light .topbar {
     width: calc(100% - 22px) !important;
     min-height: 64px !important;
+    margin-bottom: 16px !important;
     padding: 10px 12px !important;
     grid-template-columns: minmax(0, 1fr) 42px 42px !important;
     gap: 8px !important;
