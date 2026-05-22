@@ -6,10 +6,27 @@
   .dashboard-shell {
     display: block !important;
     padding-top: 1px !important;
+    background: #f5f1ea !important;
   }
 
   .dashboard-mobile-topbar {
     display: grid !important;
+    background: linear-gradient(135deg, rgba(252, 247, 239, 0.88), rgba(235, 224, 209, 0.72)) !important;
+    border-color: rgba(255, 255, 255, 0.72) !important;
+    box-shadow: 0 18px 54px rgba(31, 26, 20, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.72) !important;
+  }
+
+  .dashboard-mobile-topbar .brand-copy strong {
+    color: rgba(21, 20, 17, 0.91) !important;
+  }
+
+  .dashboard-mobile-topbar .brand-copy span {
+    color: rgba(21, 20, 17, 0.58) !important;
+  }
+
+  .dashboard-mobile-topbar .brand-mark {
+    background: linear-gradient(135deg, var(--gold), #f0dcc4) !important;
+    box-shadow: none !important;
   }
 
   .dashboard-sidebar {
