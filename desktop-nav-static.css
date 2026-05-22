@@ -1,0 +1,6 @@
+@media (min-width: 861px) {
+  .topbar {
+    position: absolute !important;
+    top: 20px !important;
+  }
+}
