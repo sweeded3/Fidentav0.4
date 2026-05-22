@@ -1,113 +1,5 @@
-const navigationLogoStyle = document.createElement("style");
-navigationLogoStyle.textContent = `
-  .topbar .brand {
-    gap: 18px !important;
-  }
-
-  .topbar .brand-mark,
-  .topbar.brand-dark .brand-mark,
-  .brand-dark .brand-mark {
-    display: block !important;
-    width: 46px !important;
-    height: 46px !important;
-    min-width: 46px !important;
-    min-height: 46px !important;
-    max-width: 46px !important;
-    max-height: 46px !important;
-    flex: 0 0 46px !important;
-    aspect-ratio: 1 / 1 !important;
-    border-radius: 50% !important;
-    border: 0 !important;
-    outline: 0 !important;
-    transform: none !important;
-    box-shadow: none !important;
-    background: linear-gradient(135deg, var(--gold), #f0dcc4) !important;
-  }
-
-  @media (min-width: 861px) {
-    .topbar::after {
-      display: none !important;
-      content: none !important;
-      width: 0 !important;
-      height: 0 !important;
-      min-width: 0 !important;
-      flex-basis: 0 !important;
-      border: 0 !important;
-      box-shadow: none !important;
-      background: none !important;
-    }
-
-    .topbar > .button {
-      display: inline-flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      flex: 0 0 auto !important;
-      width: auto !important;
-      min-width: 158px !important;
-      max-width: none !important;
-      height: 44px !important;
-      min-height: 44px !important;
-      max-height: 44px !important;
-      padding: 0 24px !important;
-      margin-left: 18px !important;
-      border-radius: 999px !important;
-      font-size: 0.94rem !important;
-      line-height: 1 !important;
-      font-weight: 600 !important;
-      letter-spacing: -0.01em !important;
-      color: rgba(21,20,17,.84) !important;
-      border: 1px solid rgba(126,101,68,.14) !important;
-      background: linear-gradient(135deg, rgba(255,250,244,.64), rgba(234,224,210,.46)) !important;
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.74),
-        inset 0 -1px 0 rgba(126,101,68,.06),
-        0 12px 24px rgba(31,26,20,.06) !important;
-      backdrop-filter: blur(18px) saturate(1.04) !important;
-      -webkit-backdrop-filter: blur(18px) saturate(1.04) !important;
-    }
-
-    .topbar > .button::before {
-      display: none !important;
-      content: none !important;
-      width: 0 !important;
-      height: 0 !important;
-      background: none !important;
-    }
-
-    .hero {
-      min-height: 88svh !important;
-      padding-top: 104px !important;
-      padding-bottom: 34px !important;
-    }
-
-    .hero-inner {
-      min-height: calc(88svh - 138px) !important;
-      align-content: center !important;
-      gap: 22px !important;
-    }
-
-    .hero-stage {
-      align-items: center !important;
-    }
-
-    .hero-text {
-      margin-top: 18px !important;
-    }
-
-    .hero-actions {
-      margin-top: 24px !important;
-    }
-  }
-`;
-document.head.appendChild(navigationLogoStyle);
-
-document.querySelectorAll('.topbar > .button[href$="account.html"]').forEach((button) => {
-  button.textContent = 'Личный кабинет';
-});
-
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 const hasDesktopPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-const topbar = document.querySelector(".topbar");
 
 const revealItems = document.querySelectorAll(".reveal");
 
@@ -136,6 +28,7 @@ if (!prefersReducedMotion.matches) {
   }
 }
 
+const topbar = document.querySelector(".topbar");
 const parallaxItems = document.querySelectorAll(
   ".hero-media img, .page-hero-media img, .objects-hero-media img, .detail-hero-media img, .dashboard-hero-backdrop img",
 );
