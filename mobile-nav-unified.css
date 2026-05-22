@@ -79,6 +79,20 @@
     -webkit-mask-composite: source-over !important;
     mask: url("./assets/fidenta-menu-icon.svg") center / 21px 21px no-repeat, linear-gradient(#000 0 0) !important;
   }
+
+  .hero .hero-actions,
+  .page-hero .hero-actions {
+    width: min(100%, 340px) !important;
+    max-width: 340px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .hero .hero-actions .button,
+  .page-hero .hero-actions .button {
+    width: 100% !important;
+    min-height: 46px !important;
+  }
 }
 
 @media (max-width: 420px) {
@@ -116,5 +130,11 @@
     min-height: 42px !important;
     -webkit-mask-size: 20px 20px, auto !important;
     mask-size: 20px 20px, auto !important;
+  }
+
+  .hero .hero-actions,
+  .page-hero .hero-actions {
+    width: min(100%, 318px) !important;
+    max-width: 318px !important;
   }
 }
