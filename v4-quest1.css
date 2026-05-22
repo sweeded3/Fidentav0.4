@@ -173,6 +173,33 @@
   .hero-stage { align-items: center !important; }
   .hero-text { margin-top: 18px !important; }
   .hero-actions { margin-top: 24px !important; }
+
+  .intro {
+    padding-top: 76px !important;
+    padding-bottom: 10px !important;
+  }
+
+  .intro .section-grid {
+    gap: 48px !important;
+  }
+
+  .directions {
+    padding-top: 8px !important;
+    padding-bottom: 76px !important;
+  }
+
+  .directions .section-heading {
+    margin-bottom: 20px !important;
+    gap: 40px !important;
+  }
+
+  .direction-layout {
+    margin-top: 22px !important;
+  }
+
+  .direction-panel {
+    padding: 28px 28px 30px !important;
+  }
 }
 
 /* Footer */
