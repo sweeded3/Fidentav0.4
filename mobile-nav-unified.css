@@ -79,9 +79,12 @@
   body .site-shell .topbar .brand-mark.is-moon,
   body .site-shell-light .topbar .brand-mark.is-moon {
     background:
-      radial-gradient(circle at 67% 32%, rgba(245, 241, 234, 0.96) 0 22%, transparent 23%),
-      linear-gradient(135deg, #5f6570, #c9c1b3) !important;
-    box-shadow: none !important;
+      radial-gradient(circle at 32% 28%, rgba(255, 255, 255, 0.18) 0 7%, transparent 8%),
+      radial-gradient(circle at 68% 62%, rgba(39, 42, 44, 0.14) 0 9%, transparent 10%),
+      radial-gradient(circle at 44% 70%, rgba(255, 255, 255, 0.10) 0 5%, transparent 6%),
+      radial-gradient(circle at 72% 30%, rgba(33, 36, 39, 0.12) 0 6%, transparent 7%),
+      linear-gradient(135deg, #6f7478 0%, #b9b0a2 52%, #e8dcc8 100%) !important;
+    box-shadow: inset -10px -8px 18px rgba(31, 26, 20, 0.12), inset 8px 7px 16px rgba(255, 255, 255, 0.16) !important;
   }
 
   body .site-shell .topbar .brand-copy strong,
