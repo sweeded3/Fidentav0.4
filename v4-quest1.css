@@ -122,6 +122,19 @@
   background: linear-gradient(135deg, rgba(255,250,244,0.88), rgba(240,232,221,0.72)) !important;
 }
 
+.intro {
+  padding-bottom: 34px !important;
+}
+
+.intro .section-grid {
+  min-height: 0 !important;
+  gap: clamp(40px, 8vw, 120px) !important;
+}
+
+.directions {
+  padding-top: 34px !important;
+}
+
 .asset-story {
   padding-bottom: 64px !important;
 }
@@ -366,6 +379,14 @@
     box-shadow:
       inset 0 1px 0 rgba(255,255,255,0.18),
       0 14px 30px rgba(31,26,20,0.075) !important;
+  }
+
+  .intro {
+    padding-bottom: 22px !important;
+  }
+
+  .directions {
+    padding-top: 26px !important;
   }
 
   .asset-story {
